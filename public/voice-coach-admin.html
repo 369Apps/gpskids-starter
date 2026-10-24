@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Coach minutes (admin, preview)</title><link rel="stylesheet" href="/voice-coach-admin.css?v=1"></head>
+<body><main>
+<h1>Coach minutes <small>preview admin</small></h1>
+<form id="f"><input id="k" type="password" placeholder="Admin key" autocomplete="off"><label><input type="checkbox" id="t" checked> include test rows</label><button>Show</button></form>
+<p id="msg"></p>
+<div id="out" hidden>
+  <p class="banner" id="banner" hidden>TEST DATA: rows marked test are made-up seed rows, not real families.</p>
+  <div class="cards" id="cards"></div>
+  <h2>Live taste to Founding Family (30 days)</h2><table id="funnel"></table>
+  <h2>At 80% or more of their cap</h2><table id="near"></table>
+  <h2>Top users</h2><table id="top"></table>
+  <h2>Families this month</h2><table id="fams"></table>
+  <h2>Kids this month</h2><table id="kids"></table>
+  <h2>Daily total</h2><table id="daily"></table>
+  <p class="fine">Ids are random profile ids, never names. Cost is an estimate (see lib/vcusage.js).</p>
+</div></main><script src="/voice-coach-admin.js?v=1"></script></body></html>

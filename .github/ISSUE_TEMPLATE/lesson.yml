@@ -1,0 +1,30 @@
+name: Lesson or content idea
+description: A prompt, example, or speaking game for kids
+title: "Lesson: "
+labels: ["content"]
+body:
+  - type: dropdown
+    id: ages
+    attributes:
+      label: Age band
+      options:
+        - 5 to 8
+        - 9 to 12
+        - 13 to 17
+        - Any
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: The prompt
+      description: A topic a child can talk about. Do not ask them to say their name, school, or age.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it helps
+      description: One or two sentences. Hook, point, example, or close is useful.
+    validations:
+      required: false

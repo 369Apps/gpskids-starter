@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free public speaking coaching for kids | GPS Kids</title>
+<meta name="description" content="Free public speaking coaching for kids ages 5-17. Talk to our AI Coach right now, then join free. Online.">
+<link rel="stylesheet" href="/try.css?v=1">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"GPS Kids","url":"https://gpskids.app"},
+{"@type":"WebSite","name":"GPS Kids","url":"https://gpskids.app"},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is it really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free forever is 10 minutes a day of recorded coaching."}},
+{"@type":"Question","name":"Is it safe for my child?","acceptedAnswer":{"@type":"Answer","text":"A parent starts every session. We don't ask kids for personal info and don't store demo audio."}},
+{"@type":"Question","name":"Is this a real person?","acceptedAnswer":{"@type":"Answer","text":"No. It's an AI Coach. You can request a call from our team."}},
+{"@type":"Question","name":"My child is under 13. Can they try it?","acceptedAnswer":{"@type":"Answer","text":"Yes, with you leading the demo. We don't collect your child's personal info."}},
+{"@type":"Question","name":"Where are in-person classes?","acceptedAnswer":{"@type":"Answer","text":"Online by default. A school can add a place in brand.js."}}]}]}</script>
+</head>
+<body>
+<main>
+<section class="hero">
+  <p class="brand">GPS Kids</p>
+  <h1>Free public speaking coaching for kids</h1>
+  <p class="sub">Ages 5-17. Talk to our AI Coach right now. Parent first.</p>
+  <button class="big" id="talk">Talk to the AI Coach</button>
+  <p class="paused" id="paused" hidden>Live demos are resting today.</p>
+  <a class="link" href="#signup" id="tryfree">Try it free</a>
+</section>
+<ul class="trust">
+  <li>Parent first, always. Kids speak only with you there.</li>
+  <li>You're talking to an AI Coach, and we say so.</li>
+  <li>We don't ask kids for names, schools, or locations.</li>
+  <li>Demo audio is not stored.</li>
+  <li>Online. In-person classes only if a school sets them up.</li>
+</ul>
+<section><h2>How it works</h2><ol class="how"><li>Tap the button.</li><li>Your child gives a 30-second intro.</li><li>Get 2 kind tips and a friendly Rebuttal Round.</li><li>Save progress free.</li></ol></section>
+<section id="plans"><h2>Plans</h2>
+<div class="tabs" role="tablist"><button type="button" role="tab" class="tab on" id="t-online" aria-selected="true">Online</button><button type="button" role="tab" class="tab" id="t-inperson" aria-selected="false">In person</button></div>
+<div class="tab-panel" id="tab-online" role="tabpanel"><table class="cmp"><thead><tr><th></th><th class="plan sel" data-plan="free" aria-pressed="true">Free forever<b>$0</b></th><th class="plan" data-plan="founding_family" aria-pressed="false">Founding Family<b>$20/mo</b></th></tr></thead><tbody><tr><th scope="row">AI Coach time</th><td>10 min a day</td><td>Unlimited</td></tr><tr><th scope="row">Tips + Rebuttal Round</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Points and streaks</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Friend free months</th><td><span class="no">No</span></td><td>1 free month each</td></tr><tr><th scope="row">Money-back</th><td><span class="no">No</span></td><td>30 days</td></tr><tr><td></td><td><button type="button" class="pick pri" data-plan="free">Start free</button></td><td><button type="button" class="pick pay" data-plan="founding_family">Join for $20/mo</button><span class="mb">30-day money-back guarantee</span></td></tr></tbody></table></div>
+<div class="tab-panel" id="tab-inperson" role="tabpanel" hidden><table class="cmp"><thead><tr><th></th><th class="plan" data-plan="pro" aria-pressed="false">Pro<b>$100/mo</b></th><th class="plan" data-plan="all_access" aria-pressed="false">All Access<b>$200/mo</b></th></tr></thead><tbody><tr><th scope="row">Everything online</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">In-person classes at HQ</th><td>4 a month</td><td>Unlimited</td></tr><tr><th scope="row">Future courses</th><td><span class="no">No</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Group size</th><td>8-12 kids</td><td>8-12 kids</td></tr><tr><td></td><td><button type="button" class="pick pay" data-plan="pro">Join for $100/mo</button><span class="mb">30-day money-back guarantee</span></td><td><button type="button" class="pick pay" data-plan="all_access">Join for $200/mo</button><span class="mb">30-day money-back guarantee</span></td></tr></tbody></table></div>
+  <p class="fine">Founding Family: "Confident in 30 days or your money back." Each friend who joins earns both families a free month. Secure checkout by Stripe. Cancel any time.</p>
+</section>
+<section><h2>Free tracks coming soon</h2><p class="fine">Money, kid entrepreneurs, AI for kids, debate, leadership, teen interview.</p></section>
+<section id="paid" hidden><h2>Welcome to GPS Kids!</h2><p class="picked" id="pd-msg" role="status">Confirming your payment…</p>
+  <div id="pd-day" hidden><h3>Pick your class day</h3><p class="fine">In person, if your school offers a class. 6 to 7 PM.</p>
+    <div class="days"><button type="button" class="pick pri" data-day="tue">Tuesday 6-7 PM</button><button type="button" class="pick pri" data-day="thu">Thursday 6-7 PM</button></div>
+    <p class="fine" id="pd-day-msg" role="status"></p></div>
+  <p class="fine"><button type="button" class="linkish" id="pd-more">See the full GPS Kids page</button></p>
+</section>
+<section id="signup"><h2 id="l-h">Start free</h2><p class="picked" id="l-pick" role="status">You picked: <b id="l-plan">Free forever</b></p>
+  <form id="lead" novalidate>
+    <label>First name<input id="l-name" maxlength="60" autocomplete="given-name" autocapitalize="words" enterkeyhint="next"></label>
+    <label id="l-email-l"><span id="l-email-t">Email</span><input type="email" id="l-email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" enterkeyhint="go"></label>
+    <label id="l-phone-l" hidden>Phone<input type="tel" id="l-phone" autocomplete="tel" inputmode="tel" enterkeyhint="go"></label>
+    <button type="button" class="link sm" id="l-usephone">Use my phone instead</button>
+    <label>Child's age<select id="l-band"><option value="">Tap to pick</option><option value="5-8">5 to 8</option><option value="9-12">9 to 12</option><option value="13-17">13 to 17</option></select></label>
+    <label class="ck"><input type="checkbox" id="l-ok"> I'm a parent/guardian 18+ and it's OK for GPS Kids to contact me about my GPS Kids plan.</label>
+    <div id="l-ts" class="ts"></div>
+    <button class="big sm" id="l-send" type="submit">Start free</button>
+    <p class="fine" id="l-msg" role="status"></p>
+    <button type="button" class="link" id="l-call">Questions? Request a call</button>
+  </form>
+</section>
+<section><h2>Questions</h2><dl class="faq">
+  <dt>Is it really free?</dt><dd>Yes. Free forever is 10 minutes a day of recorded coaching.</dd>
+  <dt>Is it safe for my child?</dt><dd>A parent starts every session. We don't ask kids for personal info and don't store demo audio.</dd>
+  <dt>Is this a real person?</dt><dd>No. It's an AI Coach. You can request a call from our team.</dd>
+  <dt>My child is under 13. Can they try it?</dt><dd>Yes, with you leading the demo. We don't collect your child's personal info.</dd>
+  <dt>My child is shy.</dt><dd>That's who we built this for. One sentence counts.</dd>
+  <dt>Where are in-person classes?</dt><dd>Online by default. A school can add a place in brand.js.</dd>
+  <dt>What's the guarantee?</dt><dd>Founding Family: "Confident in 30 days or your money back."</dd></dl></section>
+<footer><p>GPS Kids</p><p><a href="/privacy">Privacy</a></p>
+  <p>The AI Coach is an AI, not a person.</p><p>In a crisis, call or text 988. In an emergency, call 911.</p></footer>
+</main>
+
+<div class="modal" id="m-gate" hidden role="dialog" aria-modal="true" aria-labelledby="g-h"><div class="card">
+  <h2 id="g-h">Before we start</h2>
+  <label class="ck"><input type="checkbox" id="g-adult"> I'm a parent/guardian 18+.</label>
+  <label class="ck"><input type="checkbox" id="g-ai"> I understand I'm talking to an AI, my child may speak only while I'm present, and audio is not stored.</label>
+  <p class="fine">This is an AI Coach, not a person. For kids under 13, the parent leads the demo and we don't collect your child's personal info.</p>
+  <div id="g-ts" class="ts"></div>
+  <button class="big sm" id="g-start" disabled>Start talking</button>
+  <p class="fine bad" id="g-err" role="status"></p>
+  <button class="link" id="g-close">Not now</button>
+</div></div>
+
+<div class="modal" id="m-live" hidden role="dialog" aria-modal="true"><div class="card live">
+  <p class="timer" id="v-timer" hidden></p>
+  <p class="state" id="v-state">Connecting...</p>
+  <div class="orb" id="v-orb"></div>
+  <p class="fine" id="v-said" aria-live="polite"></p>
+  <button class="big sm stop" id="v-stop">End demo</button>
+</div></div>
+
+<div class="modal" id="m-safe" hidden role="dialog" aria-modal="true"><div class="card">
+  <h2>Let's get a parent or trusted adult to join you.</h2>
+  <p>You can call or text <b>988</b> to reach the Suicide and Crisis Lifeline any time. If someone is in immediate danger, call <b>911</b>.</p>
+  <button class="big sm" id="s-ok">OK</button>
+</div></div>
+
+<div class="modal" id="m-done" hidden role="dialog" aria-modal="true"><div class="card">
+  <h2 id="d-h">Great job!</h2>
+  <p id="d-p">Thanks for trying the AI Coach. Here's how to keep going.</p>
+  <button class="big sm" id="d-plans">See plans</button>
+  <a class="link" href="#signup" id="d-free">Try it free</a>
+</div></div>
+<div id="stick" hidden><button type="button" class="big sm" id="stick-btn">Start free</button></div>
+<script type="module" src="/try.js?v=1"></script>
+</body></html>

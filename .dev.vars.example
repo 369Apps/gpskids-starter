@@ -1,0 +1,41 @@
+# Copy to .dev.vars for `npx wrangler pages dev`. Never commit .dev.vars.
+# Leave a line blank to turn that feature off. Workers AI recorded tips need no key.
+
+# Optional live voice. Kids never see these values.
+# Point AI_HTTP_URL at an HTTP chat endpoint and AI_REALTIME_URL at a realtime socket.
+# Set AI_MODEL, AI_VOICE_ID, and AI_REALTIME_SUBPROTOCOL to what that provider documents.
+# Leave them blank to use Cloudflare Workers AI for recorded tips.
+AI_API_KEY=
+AI_HTTP_URL=
+AI_REALTIME_URL=
+AI_MODEL=
+AI_REALTIME_SUBPROTOCOL=
+AI_VOICE_ID=
+AI_TEXT_MODEL=
+
+# Salt for anonymous hashes. Use a long random string on your own deploy.
+IP_SALT=
+
+# Grown-up lead export at /api/fc/leads. Not a kid PIN.
+NOTES_ADMIN_CODE=
+FC_DAILY_CAP=
+
+# Cloudflare Turnstile. Public test keys are used when these are empty.
+TURNSTILE_SITEKEY=
+TURNSTILE_SECRET=
+
+# Optional parent CRM. No location id is built in.
+GHL_API_KEY=
+GHL_LOCATION_ID=
+GHL_GPSKIDS_HQ_TOKEN=
+
+# Optional payments. Leave empty to hide checkout.
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+
+# Optional admin keys for your own fork. Leave empty.
+PITCH_ADMIN_KEY=
+VC_ADMIN_KEY=
+VC_ENABLED=
+VC_LIVE=
+TRYNOW_ENABLED=

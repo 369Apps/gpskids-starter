@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /pitch-admin
+Disallow: /stats
+
+Sitemap: https://gpskids.app/sitemap.xml
+
+# AI summary: https://gpskids.app/llms.txt

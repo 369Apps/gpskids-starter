@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script src="/brand.js"></script>
+<title>GPS Kids: free public speaking coach for kids</title>
+<meta name="description" content="A free public speaking coach for kids ages 5 to 17. Tap to talk with a kind AI coach, get one tip at a time, and build confidence with points and streaks.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GPS Kids">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="GPS Kids: free public speaking coach for kids">
+<meta property="og:description" content="Free public speaking coach for kids ages 5 to 17. Tap to talk with a kind AI coach.">
+<meta property="og:url" content="https://gpskids.app/">
+<meta property="og:image" content="/favicon.svg">
+<meta property="og:image:secure_url" content="/favicon.svg">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="GPS Kids: free public speaking coach for kids, with a blue Talk to the AI Coach button">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GPS Kids: free public speaking coach for kids">
+<meta name="twitter:description" content="Free public speaking coach for kids ages 5 to 17. Tap to talk with a kind AI coach.">
+<meta name="twitter:image" content="/favicon.svg">
+<meta name="twitter:image:alt" content="GPS Kids: free public speaking coach for kids">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://gpskids.app/#org",
+   "name": "GPS Kids",
+   "url": "https://gpskids.app/",
+   "logo": "https://gpskids.app/icon-512.png",
+   "address": null
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://gpskids.app/#site",
+   "name": "GPS Kids",
+   "url": "https://gpskids.app/",
+   "publisher": {
+    "@id": "https://gpskids.app/#org"
+   },
+   "inLanguage": "en"
+  },
+  {
+   "@type": "Product",
+   "name": "GPS Kids public speaking coach",
+   "description": "Free public speaking coach for kids ages 5 to 17, with a kind AI coach, points and streaks.",
+   "brand": {
+    "@id": "https://gpskids.app/#org"
+   },
+   "image": "https://gpskids.app/og-home.png",
+   "offers": [
+    {
+     "@type": "Offer",
+     "name": "Free",
+     "price": "0",
+     "priceCurrency": "USD",
+     "url": "https://gpskids.app/try?plan=free",
+     "availability": "https://schema.org/InStock"
+    },
+    {
+     "@type": "Offer",
+     "name": "Founding Family",
+     "price": "20",
+     "priceCurrency": "USD",
+     "url": "https://gpskids.app/try?plan=founding_family",
+     "availability": "https://schema.org/InStock",
+     "priceSpecification": {
+      "@type": "UnitPriceSpecification",
+      "price": "20",
+      "priceCurrency": "USD",
+      "unitCode": "MON",
+      "referenceQuantity": {
+       "@type": "QuantitativeValue",
+       "value": 1,
+       "unitCode": "MON"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "What is GPS Kids?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "GPS Kids is a free public speaking coach for kids. Kids practice short talks and get kind tips from an AI coach, with points and streaks."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What ages is it for?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kids ages 5 to 17. There are age groups so the challenges fit each kid."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it free?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. The Free plan is free forever and needs no account. A Founding Family plan for unlimited practice is 20 dollars a month, with a 30-day money-back guarantee."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is it safe for kids?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A grown-up starts each talk with the AI coach, and kids join with them. Audio is not stored, and the coach never asks kids for their name, school, address or contact info."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How does the AI coach work?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tap to talk. The AI coach listens to a short talk, says what went well, and gives one small thing to try next time. It is an AI, not a person, and it says so."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are there in-person classes?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In-person classes are optional. A school or family can add a place in brand.js. The free coach works online."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+<meta name="theme-color" content="#fbf8ef">
+<link rel="canonical" href="https://gpskids.app/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="preload" href="/fonts/dmsans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/youngserif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css?v=1">
+<link rel="stylesheet" href="/home-try.css?v=1">
+<link rel="stylesheet" href="/freecoach.css?v=1">
+<link rel="modulepreload" href="/prompts.js?v=1">
+</head>
+<body>
+
+<!-- 1. Pick an age band (first visit) -->
+<main class="view" id="v-pick" hidden>
+  <div class="bar"><span class="brand">GPS Kids <b>Speak</b></span><button class="icon-btn" type="button" data-share aria-label="Share this app">↗</button></div>
+  <div id="vh-root">
+  <!-- Free coaching taste (PREVIEW): freecoach.js + freecoach.css. No timer on screen, a soft ring fills instead. -->
+  <section id="fc" aria-labelledby="fc-h">
+    <div id="fc-start">
+      <h1 id="fc-h">Talk to Coach</h1>
+      <p class="fc-sub">Free speaking practice for kids.</p>
+      <button type="button" class="fc-orb" id="fc-orb" aria-label="Talk to Coach"><span><span class="fc-mic" aria-hidden="true">🎤</span>Tap to talk</span></button>
+      <p class="fc-q" id="fc-q">Tell me about yourself</p>
+            <div class="fc-chips" role="group" aria-label="Pick a topic">
+        <button type="button" class="fc-chip" data-topic="me" aria-pressed="true">🙋 Tell me about yourself</button>
+        <button type="button" class="fc-chip" data-topic="pitch" aria-pressed="false">💡 Pitch your idea</button>
+        <button type="button" class="fc-chip" data-topic="animal" aria-pressed="false">🐶 My favorite animal</button>
+      </div>
+            <p class="fc-err" id="fc-err" role="status"></p>
+      <button type="button" class="fc-link" id="fc-typebtn">No microphone? Type instead</button>
+    </div>
+    <div id="fc-live" hidden>
+      <div class="fc-ringwrap"><svg viewBox="0 0 110 110" aria-hidden="true"><circle cx="55" cy="55" r="50" stroke="#e7e3ff"/><circle id="fc-fill" cx="55" cy="55" r="50" stroke="#5b4bff" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314"/></svg><div id="fc-live-orb"></div></div>
+      <p class="fc-q" id="fc-state" aria-live="polite">Connecting...</p>
+      <p class="fc-wrap" id="fc-wrap" hidden>Time to wrap up. Say your best last line!</p>
+      <button type="button" class="fc-big" id="fc-end">I'm done</button>
+    </div>
+    <div id="fc-type" hidden>
+      <p class="fc-sub" id="fc-type-msg" role="status"></p>
+      <p class="fc-q" id="fc-type-q"></p>
+      <label for="fc-text" class="fc-q">Your answer</label>
+      <textarea id="fc-text" maxlength="1500" placeholder="Write what you would say out loud..."></textarea>
+      <p class="fc-err" id="fc-type-err" role="status"></p>
+      <button type="button" class="fc-big" id="fc-type-go">Get my stars</button>
+      <button type="button" class="fc-link" id="fc-back">Back</button>
+    </div>
+    <div id="fc-sum" hidden>
+      <div class="fc-card" aria-live="polite">
+        <div class="fc-top"><span class="fc-score"><span id="fc-score">0</span><small style="font-size:16px"> points</small></span><span class="fc-stars" id="fc-stars" aria-label="Stars"></span></div>
+        <p class="fc-row">⭐ <b>Best moment:</b> <span id="fc-best"></span></p>
+        <p class="fc-row">🎯 <b>Try next:</b> <span id="fc-tip"></span></p>
+        <p class="fc-row"><span class="fc-streak">🔥 Streak: Day 1</span></p>
+      </div>
+      <button type="button" class="fc-big" id="fc-keep">Keep my stars</button>
+      <button type="button" class="fc-link" id="fc-again">Try again</button>
+    </div>
+    <div class="fc-bg" id="fc-pop" hidden>
+      <div class="fc-pop" role="dialog" aria-modal="true" aria-labelledby="fc-pop-h">
+        <div id="fc-pop-ask">
+          <h2 id="fc-pop-h">Want to keep your stars?</h2>
+          <p class="fc-sub">Ask a grown-up!</p>
+          <button type="button" class="fc-big" id="fc-yes">Yes, I'm a grown-up</button>
+          <button type="button" class="fc-link" id="fc-no">Not now</button>
+        </div>
+        <form id="fc-form" hidden novalidate>
+          <h2>Get your child's free speaking tips</h2>
+          <label for="fc-first">Your first name</label><input type="text" id="fc-first" maxlength="60" autocomplete="given-name" autocapitalize="words">
+          <label for="fc-email">Your email</label><input type="email" id="fc-email" maxlength="254" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false">
+          <label>Your kid's age</label>
+          <div class="fc-ages" role="group" aria-label="Kid's age">
+            <button type="button" class="fc-age" data-band="5-7" aria-pressed="false">5 to 7</button><button type="button" class="fc-age" data-band="8-10" aria-pressed="false">8 to 10</button><button type="button" class="fc-age" data-band="11-13" aria-pressed="false">11 to 13</button><button type="button" class="fc-age" data-band="14-17" aria-pressed="false">14 to 17</button>
+          </div>
+          <label class="fc-ck"><input type="checkbox" id="fc-consent"> <span>Email me one speaking challenge a day. Unsubscribe anytime.</span></label>
+          <p class="fc-err" id="fc-form-err" role="status"></p>
+          <button type="submit" class="fc-big" id="fc-send">Send my free tips</button>
+          <p class="fc-fine">We only ask for your name and email. Never your child's name or photo.</p>
+        </form>
+        <div id="fc-thanks" hidden>
+          <h2>Saved! 🎉</h2>
+          <p class="fc-sub">Check your email for today's speaking challenge.</p>
+          <button type="button" class="fc-big" id="fc-startfree">Start free</button>
+          <p class="fc-fine">Free is 10 minutes a day with the AI Coach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <header class="vh-nav"><span class="vh-logo">GPS Kids</span></header>
+  <section class="vh" id="vh">
+    <h1 class="vh-h">Free public speaking coaching for kids</h1>
+    <p class="vh-sub">A grown-up starts the talk. Kids can join with you. Free.</p>
+    <button type="button" class="vh-orb" id="talk" aria-label="Talk to the AI Coach"><span class="vh-ring"></span><span class="vh-core"></span><span class="vh-lbl">Talk to the AI Coach</span></button>
+    <button type="button" class="vh-pill" id="talk-pill">🎤 Click to talk</button>
+    <button type="button" class="vh-kid" id="vh-kid">I'm a kid, let's play</button>
+    <div class="inl" id="m-gate" hidden aria-labelledby="g-h"><div class="card">
+  <h2 id="g-h">Before we start</h2>
+  <label class="ck"><input type="checkbox" id="g-adult"> I'm a parent/guardian 18+.</label>
+  <label class="ck"><input type="checkbox" id="g-ai"> I understand I'm talking to an AI, my child may speak only while I'm present, and audio is not stored.</label>
+  <p class="fine">This is an AI Coach, not a person. For kids under 13, the parent leads the demo and we don't collect your child's personal info.</p>
+  <div id="g-ts" class="ts"></div>
+  <button class="big sm" id="g-start" disabled>Start talking</button>
+  <p class="fine bad" id="g-err" role="status"></p>
+  <button class="link" id="g-close">Not now</button>
+</div></div>
+    <div class="inl" id="m-live" hidden ><div class="card live">
+  <p class="timer" id="v-timer" hidden></p>
+  <p class="state" id="v-state">Connecting...</p>
+  <div class="orb" id="v-orb"></div>
+  <div class="caps" aria-live="polite"><p id="v-heard"></p><p id="v-said"></p></div>
+  <button class="big sm stop" id="v-stop">End demo</button>
+</div></div>
+  </section>
+  <div id="vh-after">
+  <section id="plans"><h2>Plans</h2>
+<div class="tabs" role="tablist"><button type="button" role="tab" class="tab on" id="t-online" aria-selected="true">Online</button><button type="button" role="tab" class="tab" id="t-inperson" aria-selected="false">In person</button></div>
+<div class="tab-panel" id="tab-online" role="tabpanel"><table class="cmp"><thead><tr><th></th><th class="plan sel" data-plan="free" aria-pressed="true">Free forever<b>$0</b></th><th class="plan" data-plan="founding_family" aria-pressed="false">Founding Family<b>$20/mo</b></th></tr></thead><tbody><tr><th scope="row">AI Coach time</th><td>10 min a day</td><td>Unlimited</td></tr><tr><th scope="row">Tips + Rebuttal Round</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Points and streaks</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Friend free months</th><td><span class="no">No</span></td><td>1 free month each</td></tr><tr><th scope="row">Money-back</th><td><span class="no">No</span></td><td>30 days</td></tr><tr><td></td><td><button type="button" class="pick pri" data-plan="free">Start free</button></td><td><button type="button" class="pick pay" data-plan="founding_family">Join for $20/mo</button><span class="mb">30-day money-back guarantee</span></td></tr></tbody></table></div>
+<div class="tab-panel" id="tab-inperson" role="tabpanel" hidden><table class="cmp"><thead><tr><th></th><th class="plan" data-plan="pro" aria-pressed="false">Pro<b>$100/mo</b></th><th class="plan" data-plan="all_access" aria-pressed="false">All Access<b>$200/mo</b></th></tr></thead><tbody><tr><th scope="row">Everything online</th><td><span class="ok">✓</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">In-person classes at HQ</th><td>4 a month</td><td>Unlimited</td></tr><tr><th scope="row">Future courses</th><td><span class="no">No</span></td><td><span class="ok">✓</span></td></tr><tr><th scope="row">Group size</th><td>8-12 kids</td><td>8-12 kids</td></tr><tr><td></td><td><button type="button" class="pick pay" data-plan="pro">Join for $100/mo</button><span class="mb">30-day money-back guarantee</span></td><td><button type="button" class="pick pay" data-plan="all_access">Join for $200/mo</button><span class="mb">30-day money-back guarantee</span></td></tr></tbody></table></div>
+  <p class="fine">Founding Family: "Confident in 30 days or your money back." Each friend who joins earns both families a free month. Secure checkout by Stripe. Cancel any time.</p>
+</section>
+  <section id="signup"><h2 id="l-h">Start free</h2><p class="picked" id="l-pick" role="status">You picked: <b id="l-plan">Free forever</b></p>
+  <form id="lead" novalidate>
+    <label>First name<input id="l-name" maxlength="60" autocomplete="given-name" autocapitalize="words" enterkeyhint="next"></label>
+    <label id="l-email-l"><span id="l-email-t">Email</span><input type="email" id="l-email" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" enterkeyhint="go"></label>
+    <label id="l-phone-l" hidden>Phone<input type="tel" id="l-phone" autocomplete="tel" inputmode="tel" enterkeyhint="go"></label>
+    <button type="button" class="link sm" id="l-usephone">Use my phone instead</button>
+    <label>Child's age<select id="l-band"><option value="">Tap to pick</option><option value="5-8">5 to 8</option><option value="9-12">9 to 12</option><option value="13-17">13 to 17</option></select></label>
+    <label class="ck"><input type="checkbox" id="l-ok"> I'm a parent/guardian 18+ and it's OK for GPS Kids to contact me about my GPS Kids plan.</label>
+    <div id="l-ts" class="ts"></div>
+    <button class="big sm" id="l-send" type="submit">Start free</button>
+    <p class="fine" id="l-msg" role="status"></p>
+    <button type="button" class="link" id="l-call">Questions? Request a call</button>
+  </form>
+</section>
+  </div>
+  <div class="modal" id="m-safe" hidden role="dialog" aria-modal="true"><div class="card">
+  <h2>Let's get a parent or trusted adult to join you.</h2>
+  <p>You can call or text <b>988</b> to reach the Suicide and Crisis Lifeline any time. If someone is in immediate danger, call <b>911</b>.</p>
+  <button class="big sm" id="s-ok">OK</button>
+</div></div>
+  <div class="modal" id="m-done" hidden role="dialog" aria-modal="true"><div class="card">
+  <h2 id="d-h">Great job!</h2>
+  <p id="d-p">Thanks for trying the AI Coach. Here's how to keep going.</p>
+  <button class="big sm" id="d-plans">See plans</button>
+  <a class="link" href="#signup" id="d-free">Try it free</a>
+</div></div>
+  <footer class="vh-foot"><a href="/privacy">Privacy</a></footer>
+  </div>
+  <div class="pick-hero">
+    <p class="headline">A chat box tells kids <em>what</em> to say.<br>GPS Kids teaches them <em>how</em> to say it.</p>
+    <p class="kicker"><span class="free-pill">FREE</span> 1 minute a day</p>
+    <h1 id="pick-h">Who are you?</h1>
+    <p class="role-sub" id="role-sub">Tap one. No passwords.</p>
+  </div>
+  <section class="role-kid" id="role-kid">
+    <p class="role-t" id="role-kid-t"><span aria-hidden="true">🧒</span> I'm a kid <small>Tap your age to start. Free, 1 minute a day.</small></p>
+    <div class="bands" id="bands"></div>
+  </section>
+  <div class="roles" id="roles">
+    <button type="button" class="role" data-role="parent"><span class="e" aria-hidden="true">👪</span><span><strong>I'm a parent</strong><small>Your child's progress, coach notes, classes</small></span></button>
+    <button type="button" class="role" data-role="coach"><span class="e" aria-hidden="true">🎤</span><span><strong>I'm a coach</strong><small>Tonight's script, class report, kid notes</small></span></button>
+    <button type="button" class="role" data-role="partner"><span class="e" aria-hidden="true">🏫</span><span><strong>I'm a partner</strong><small>Run GPS Kids at your school or center</small></span></button>
+  </div>
+  <p class="privacy">🔒 No account. Your recording stays on this phone. To give feedback, our AI turns it into words, then deletes it. We never keep your name, voice, or words. We only keep anonymous app steps (like "started a talk" or "saw feedback") with a random player number, for 60 days, to make the app better. A grown-up can leave their own name and email after a math check. We never keep a child's name, email, or photo. Prefer typing? That works too. <a class="inline-link" href="/privacy">Privacy policy</a></p>
+</main>
+
+<!-- 2. Home = today's challenge -->
+<main class="view" id="v-home" hidden>
+  <div class="bar">
+    <button class="pill band-pill" id="band-pill" type="button"></button>
+    <span class="pill streak" id="streak">🔥 0</span>
+    <button class="icon-btn" id="home-share" type="button" data-share aria-label="Share today's challenge">↗</button>
+  </div>
+  <div class="who-row"><button class="who-chip" id="who-btn" type="button"></button><button class="pill band-mini" id="band-mini" type="button" hidden></button></div>
+  <p class="belt-line" id="belt-line" hidden><i class="belt-dot" id="belt-dot" aria-hidden="true"></i><b id="belt-name"></b><small id="belt-next"></small></p>
+  <div class="xp" aria-live="polite"><span id="lvl">Lv 1</span><span class="xp-bar"><i id="xp-fill"></i></span><span id="xp-num">0 XP</span></div>
+  <section class="challenge">
+    <p class="kicker" id="kicker"><span class="free-pill">FREE</span> <span id="today-label">Today's challenge</span></p>
+    <p class="type-chip" id="type-chip"></p>
+    <h1 class="prompt" id="prompt"></h1>
+    <p class="feat-row" id="feat-row" hidden>Free through Oct 31. Love your idea? <button type="button" class="inline-link" id="feat-pn">Enter it in Pitch Night</button></p>
+  </section>
+  <div class="actions">
+    <p class="done-row" id="done-row" hidden></p>
+    <button class="link-btn plan-link" id="plan-btn" type="button">🧠 Plan first</button>
+    <button class="btn btn-go btn-today" id="start-btn" type="button">🎤 Today's challenge</button>
+    <p class="start-note" id="start-note" hidden></p>
+    <a class="btn vc-home" id="vc-home" href="/voice-coach">Practice with AI Coach 🎤</a>
+  </div>
+  <details class="privacy-d" id="privacy-d">
+    <summary class="privacy-sum" id="privacy-btn">🔒 Privacy</summary>
+    <p class="privacy">🔒 No account. Your recording stays on this phone. To give feedback, our AI turns it into words, then deletes it. We never keep your name, voice, or words. We only keep anonymous app steps (like "started a talk" or "saw feedback") with a random player number, for 60 days, to make the app better. A grown-up can leave their own name and email after a math check. We never keep a child's name, email, or photo. <button class="inline-link" id="prefer-type" type="button">Prefer typing?</button> <a class="inline-link" href="/privacy">Privacy policy</a></p>
+    <p class="privacy voice-privacy" data-voice hidden>🔊 Coach is a computer voice, not a real person. When you answer Coach's question, our AI turns your answer into words, then deletes the recording. To make Coach's voice, only Coach's own words (never your voice) may go to our voice service on Cloudflare. Nothing is saved.</p>
+  </details>
+  <!-- Kids: everything else lives behind one small "More" link, collapsed by default (grown-ups: always open, no link) -->
+  <details class="more" id="more">
+    <summary class="more-sum" id="more-btn">More</summary>
+    <div class="more-body">
+    <div class="more-top">
+      <button class="pn-card pz-card" id="pz-card" type="button" hidden><span class="pn-trophy" aria-hidden="true">🏆</span><span class="pn-txt"><b>Leaderboard</b><small id="pz-card-s">Your first challenge each day counts. Free.</small></span><span class="pn-go" aria-hidden="true">See ›</span></button>
+      <button class="pn-card club-card" id="club-card" type="button" hidden><span class="pn-trophy" aria-hidden="true">🏫</span><span class="pn-txt"><b>7 days in a row. You're a real speaker!</b><small>Want to practice with other kids and a coach? Ask a grown-up about the GPS Kids club.</small></span><span class="pn-go" aria-hidden="true">Grown-ups ›</span></button>
+    <button class="pn-card" id="feat-card" type="button" hidden><span class="pn-trophy" aria-hidden="true">🎃</span><span class="pn-txt"><b>Halloween challenge</b><small>Pitch a fix for Halloween trash in 1 minute. Free.</small></span><span class="pn-go" aria-hidden="true">Try ›</span></button>
+    <button class="pn-card" id="pn-card" type="button" hidden><span class="pn-trophy" aria-hidden="true">🏆</span><span class="pn-txt"><b>Kids Pitch Night</b><small>Free · Practice a 1-minute pitch. Tips stay on this phone.</small></span><span class="pn-go" aria-hidden="true">Try ›</span></button>
+      <button class="link-btn buddy-link" id="buddy-btn" type="button" hidden>👫 Play with a buddy <small>(no mic)</small></button>
+    </div>
+    <p class="goal" id="goal"></p>
+    <div class="lens" id="lens" role="group" aria-label="How long do you want to talk?"></div>
+    <div class="vrow" data-voice hidden><button class="link-btn hear" id="hear-btn" type="button">🔊 Hear it</button><span class="voice-hint" data-ios hidden>Can't hear? Turn the volume up and check the side switch.</span></div>
+    <p class="peek" id="peek" data-voice hidden></p>
+    <div class="sub-actions">
+      <button class="link-btn" id="shuffle-btn" type="button">🔀 New prompt</button>
+      <button class="link-btn" id="recs-btn" type="button">🎧 My recordings</button>
+      <button class="link-btn" id="type-btn" type="button">⌨️ Type</button>
+      <button class="link-btn" id="vset-btn" type="button" data-voice hidden>🔈 Voice</button>
+      <button class="link-btn" id="age-btn" type="button">🧭 Age group</button>
+      <button class="link-btn" id="more-share" type="button" data-share>↗ Share</button>
+      <button class="link-btn" id="home-btn" type="button" hidden>🏠 Take me home</button>
+    </div>
+    <p class="kcode" id="kcode" hidden></p>
+    <p class="proof" id="proof" hidden></p>
+    <p class="parent" hidden>👨‍👩‍👧 <b>Parents:</b> in-person sessions are optional. A school can add a place in brand.js.</p>
+    </div>
+  </details>
+</main>
+
+<!-- 3. Record / answer -->
+<main class="view" id="v-rec" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="rec-close" aria-label="Back to today's challenge">✕</button>
+    <span class="type-chip small" id="rec-chip"></span>
+    <button class="icon-btn" type="button" data-share aria-label="Share today's challenge">↗</button>
+  </div>
+  <p class="rec-prompt" id="rec-prompt"></p>
+  <div class="twist-banner" id="twist-banner" hidden><span aria-hidden="true">🌀</span><div><b>Funny twist</b><p id="twist-text"></p></div></div>
+  <div class="duel-banner" id="duel-banner" hidden><span aria-hidden="true">👨‍👩‍👧</span><div><b id="duel-bh">Grown-up's turn!</b><p id="duel-text"></p></div></div>
+  <div class="pn-banner" id="pn-banner" hidden><span aria-hidden="true">🏆</span><div><b>Pitch Night entry</b><p id="pn-banner-p"></p></div></div>
+  <div class="vrow center" data-voice hidden><button class="link-btn hear" id="rec-hear" type="button">🔊 Hear it</button></div>
+  <div class="timer-wrap">
+    <div class="timer" id="timer" role="img" aria-label="Practice progress">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#efe6d6" stroke-width="10"/>
+      <circle id="timer-fill" cx="60" cy="60" r="50" fill="none" stroke="#137a3c" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)"/></svg>
+    </div>
+    <div class="t-bar" hidden aria-hidden="true"><i id="t-fill"></i><b id="t-goal"></b></div>
+    <p class="t-note" id="t-note">Goal: 0:45</p>
+    <button class="len-chip plus talk-plus" id="talk-plus" type="button" hidden aria-label="Add 30 seconds of talk time (5 minutes is the most)">+30s</button>
+  </div>
+  <div class="notes-card" id="notes-card" hidden><p class="notes-h">🧠 4 parts · say it your way</p><ul id="notes-list"></ul></div>
+  <div class="stage">
+    <div class="prep-panel" id="prep-panel" hidden>
+      <div class="lens" id="prep-lens" role="group" aria-label="How long do you want to plan?"></div>
+      <p class="prep-h" id="prep-h">🧠 Plan your talk in your head</p>
+      <p class="prep-sub">Your talk has 4 parts. Here is an example:</p>
+      <ol id="plan-ex" class="plan-ex"></ol>
+      <p class="prep-tip" id="prep-tip"></p>
+    </div>
+    <div class="mic-panel" id="mic-panel">
+      <div class="meter" id="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="mic-msg" id="mic-msg"></p>
+      <p class="captions" id="captions" hidden></p>
+    </div>
+    <div class="err-panel" id="err-panel" role="alert" hidden>
+      <p class="err-h" id="err-h"></p>
+      <p class="err-p" id="err-p"></p>
+      <div class="err-actions">
+        <button class="sh" type="button" id="err-copy">🔗 Copy link</button>
+        <button class="sh" type="button" id="err-type">⌨️ Type instead</button>
+      </div>
+    </div>
+    <div class="play-wrap" id="play-wrap" hidden><span>🎧 Hear yourself</span><audio id="playback" controls preload="metadata"></audio></div>
+    <label class="sr-only" for="transcript">Your answer</label>
+    <textarea id="transcript" class="transcript" placeholder="Type what you said here…" spellcheck="true" hidden></textarea>
+  </div>
+  <p class="rec-status" id="rec-status" aria-live="polite"></p>
+  <div class="actions">
+    <button class="btn btn-plan" id="notes-edit" type="button" hidden>🧠 Plan first</button>
+    <button class="btn btn-go" id="rec-btn" type="button">🎤 Start recording</button>
+    <div class="sub-actions">
+      <button class="link-btn" id="redo-btn" type="button">↺ Record again</button>
+      <button class="link-btn" id="tips-btn" type="button">💡 Quick tips anyway</button>
+      <button class="link-btn" id="switch-btn" type="button">⌨️ Type instead</button>
+    </div>
+  </div>
+</main>
+
+<!-- 4. Feedback -->
+<main class="view" id="v-fb" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="fb-close" aria-label="Back to today's challenge">✕</button>
+    <span class="bar-title">Your feedback</span>
+    <button class="link-btn class-switch" id="class-switch" type="button" hidden>Not you?</button>
+    <button class="icon-btn" type="button" id="fb-share" data-share aria-label="Share my result">↗</button>
+  </div>
+  <div class="stars" id="stars"></div>
+  <p class="nowords" id="nowords" hidden>🙉 I couldn't hear enough words this time, so no scores yet. You still practiced, and that counts!</p>
+  <section class="pts" id="pts" hidden aria-live="polite"><p class="pts-big" id="pts-big"></p><p class="pts-sub" id="pts-sub"></p></section>
+  <div class="stats" id="stats"></div>
+  <p class="fixnext" id="fixnext" hidden></p>
+  <div class="play-wrap small" id="fb-play" hidden><span>🎧</span><audio id="fb-audio" controls preload="metadata"></audio></div>
+  <section class="coach" aria-live="polite">
+    <p class="coach-h"><span id="coach-h">🧑‍🏫 Coach says</span> <span class="coach-src" id="coach-src">Coach: …</span></p>
+    <p class="coach-why" id="coach-why" hidden></p>
+    <ul id="coach-list"><li class="loading">Your coach is listening to your words</li></ul>
+    <details class="heard" id="heard" hidden><summary>📝 What I heard</summary><p id="heard-text"></p></details>
+    <div class="vcoach" id="vcoach" hidden>
+      <button class="link-btn voice-link" id="hear-coach" type="button">▶ Hear my coach</button>
+      <p class="voice-hint" data-ios hidden>Can't hear Coach? Turn the volume up and check the side switch.</p>
+      <div class="ask" id="ask-box" hidden>
+        <p class="ask-q"><b>Coach asks:</b> <span id="ask-q"></span></p>
+        <div class="ask-actions"><button class="link-btn ask-link" id="ask-btn" type="button">🎤 Answer coach</button><button class="link-btn" id="ask-type" type="button">⌨️ Type</button></div>
+        <div class="ask-typed" id="ask-typed" hidden><label class="sr-only" for="ask-input">Your answer</label><input id="ask-input" maxlength="300" autocomplete="off" placeholder="Type your answer…"><button class="btn btn-ask small" id="ask-send" type="button">Send</button></div>
+        <p class="ask-status" id="ask-status" aria-live="polite"></p>
+        <p class="ask-reply" id="ask-reply" hidden></p>
+      </div>
+    </div>
+  </section>
+  <p class="answer" id="answer" hidden></p>
+  <div class="reward" id="reward"></div>
+  <p class="kc-note" id="kc-note" hidden></p>
+  <!-- First challenge (a brand-new kid's first talk): You did it! + stars + ONE big Challenge a friend -->
+  <section class="first-done" id="first-done" hidden aria-live="polite">
+    <p class="fd-emoji" aria-hidden="true">🎉</p>
+    <h1 class="fd-h">You did it!</h1>
+    <p class="fd-p" id="fd-p"></p>
+    <p class="fd-stars" id="fd-stars"></p>
+    <p class="fd-sub" id="fd-sub"></p>
+  </section>
+  <div class="fb-main" id="fb-main">
+    <div class="fb-offer" id="fb-offer">
+      <p class="fb-offer-p" id="fb-offer-p" hidden>Send this so a friend can try to beat your score.</p>
+      <button class="fb-offer-x" id="fb-offer-x" type="button" aria-label="Maybe later" hidden>✕</button>
+      <button class="btn btn-friend" id="friend-btn" type="button" hidden>⚔️ Challenge a friend</button>
+    </div>
+    <button class="btn btn-go save-btn" id="save-btn" type="button" hidden>🏆 Join the leaderboard</button>
+    <button class="link-btn beat-link" id="beat-btn" type="button" hidden>🔥 Beat it tomorrow</button>
+  </div>
+  <button class="link-btn fd-done" id="fd-done" type="button" hidden>🏠 Done</button>
+  <button class="home-nudge" id="home-nudge" type="button" hidden></button>
+  <div class="pn-submit" id="pn-submit" hidden>
+    <p class="pn-sub-h">🏆 Happy with your pitch?</p>
+    <p class="pn-sub-p" id="pn-sub-p"></p>
+    <button class="btn btn-go" id="pn-send" type="button">🏆 Submit my pitch</button>
+    <p class="pn-err" id="pn-send-err" role="alert" hidden></p>
+    <p class="pn-sub-note">🔒 Tips stay on this phone. Nothing is uploaded, and we do not keep a child's name or recording.</p>
+  </div>
+  <!-- Kids: the extras sit behind one small "More" link, collapsed (grown-ups + Pitch Night: always open, no link) -->
+  <details class="more" id="fb-more">
+    <summary class="more-sum" id="fb-more-btn">More</summary>
+    <div class="more-body" id="fb-more-body">
+    <div class="hooks" id="fb-hooks" hidden>
+      <div class="sum" id="fb-sum"></div>
+      <button class="btn btn-twist" id="twist-btn" type="button">🌀 Try a funny twist</button>
+      <p class="twist-preview" id="twist-preview"></p>
+      <button class="btn btn-duel" id="duel-btn" type="button">👨‍👩‍👧 Challenge your grown-up (on this phone)</button>
+      <p class="peek" id="fb-peek"></p>
+    </div>
+    <div class="actions">
+      <div class="sub-actions">
+        <button class="link-btn" id="card-btn" type="button">🎉 Share card</button>
+        <button class="link-btn" id="again-btn" type="button">↺ Try again</button>
+        <button class="link-btn" id="premium-btn" type="button">⭐ Premium (soon)</button>
+      </div>
+    </div>
+    <p class="privacy voice-privacy" data-voice hidden>🔊 Coach is a computer voice, not a real person. When you answer Coach's question, our AI turns your answer into words, then deletes the recording. To make Coach's voice, only Coach's own words (never your voice) may go to our voice service on Cloudflare. Nothing is saved. A friend duel link keeps only both star scores, for 7 days.</p>
+    </div>
+  </details>
+</main>
+
+<!-- 4b. Family duel (PREVIEW, ?voice=1): kid finished -> grown-up takes the same prompt -> shareable comparison card -->
+<main class="view" id="v-duel" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="duel-close" aria-label="Back to today's challenge">✕</button>
+    <span class="bar-title" id="duel-title">Family duel</span>
+    <button class="icon-btn" type="button" data-share aria-label="Share">↗</button>
+  </div>
+  <section class="duel-pass" id="duel-pass">
+    <div class="duel-emoji" id="duel-emoji" aria-hidden="true">📱➡️👩‍👧</div>
+    <h1 id="duel-h">Pass the phone to your grown-up!</h1>
+    <p class="duel-score" id="duel-kid"></p>
+    <p class="rec-prompt" id="duel-prompt"></p>
+    <p class="goal" id="duel-goal">Same challenge, same timer. Grown-up, can you beat it?</p>
+    <label class="duel-adult" id="duel-adult-row" hidden><input type="checkbox" id="duel-adult"> I'm a grown-up</label>
+    <div class="actions">
+      <button class="btn btn-go" id="duel-go" type="button">🎤 Grown-up, start</button>
+      <div class="sub-actions"><button class="link-btn" id="duel-typed" type="button">⌨️ Type instead</button></div>
+    </div>
+  </section>
+  <section class="duel-result" id="duel-result" hidden>
+    <p class="duel-winner" id="duel-winner"></p>
+    <div class="card-wrap"><img id="duel-img" alt="Family duel card" width="1080" height="1350"></div>
+    <div class="coach small-coach" id="duel-coach" hidden><p class="coach-h">🧑‍🏫 Coach to the grown-up</p><ul id="duel-coach-list"></ul></div>
+    <div class="share-row" id="duel-share"></div>
+    <div class="actions"><div class="sub-actions"><button class="link-btn" id="duel-again" type="button">↺ Grown-up, try again</button><button class="link-btn" id="duel-home" type="button">⌂ Today's challenge</button></div></div>
+    <p class="privacy">No names, no voices. Just the challenge and both star scores. Friend duel links expire after 7 days.</p>
+  </section>
+</main>
+
+<!-- 4c. Who's playing? (players on this device only) -->
+<main class="view" id="v-class" hidden>
+  <div id="class-main">
+    <h1 class="class-h">Tap your player</h1>
+    <p class="class-sub" id="class-sub"></p>
+    <div class="class-grid" id="class-grid"></div>
+    <p class="class-coach"><button type="button" class="link-btn" id="class-report-btn">Coach: class report</button></p>
+  </div>
+  <div id="class-form" hidden>
+    <h1 class="class-h">I'm new</h1>
+    <label class="who-l" for="class-name" hidden>Pick an avatar</label>
+    <input id="class-name" hidden class="class-name-big" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" enterkeyhint="done" placeholder="First name only">
+    <p class="who-l">2. Tap your age to join</p>
+    <div class="class-bands" id="class-bands"></div>
+    <p class="who-err" id="class-err" aria-live="polite"></p>
+    <div id="class-emojis" hidden></div>
+    <button class="link-btn" id="class-cancel" type="button">Back</button>
+  </div>
+  <div id="class-report" hidden>
+    <button class="link-btn back-link" id="class-kids" type="button">⬅️ Back to kids</button>
+    <h1 class="class-h" id="class-report-h">Class report</h1>
+    <p class="class-note">Only kids who used <b>this phone</b> show up here. If each kid has their own phone, open the class report on that phone. Nothing is sent to us, and the message has no link.</p>
+    <div id="class-report-list"></div>
+    <button class="link-btn btn-buddy-link" id="class-buddy" type="button">👫 Buddy play on this phone</button>
+  </div>
+</main>
+<!-- 4c2. "Take me home" link opened on a new phone: bring the progress here? (the progress came inside the link) -->
+<main class="view" id="v-welcome" hidden>
+  <div class="welcome">
+    <div class="welcome-e" id="welcome-e" aria-hidden="true">🙂</div>
+    <h1 class="welcome-h" id="welcome-h">Welcome back!</h1>
+    <p class="welcome-q" id="welcome-q">Bring your progress here?</p>
+    <p class="welcome-sum" id="welcome-sum"></p>
+    <div class="notes-box" id="welcome-notes" hidden></div>
+    <button class="btn btn-go welcome-yes" id="welcome-yes" type="button">Yes</button>
+    <p class="who-err" id="welcome-err" role="alert" hidden></p>
+    <button class="link-btn" id="welcome-no" type="button">Not now</button>
+    <p class="privacy">🔒 Your progress came inside the link. Nothing was sent to us. It stays on this phone.</p>
+  </div>
+</main>
+<main class="view" id="v-who" hidden>
+  <div class="bar"><span class="brand">GPS Kids <b>Speak</b></span><button class="icon-btn" type="button" id="who-close" aria-label="Close">✕</button></div>
+  <h1 class="who-h">Who's playing?</h1>
+  <ul class="who-list" id="who-list"></ul>
+  <button class="btn btn-go" id="who-add" type="button">➕ Add a player</button>
+  <button class="link-btn" id="who-parent" type="button">👪 Grown-ups: progress and coach notes</button>
+  <p class="who-max" id="who-max" hidden>That's 8 players, the most for one phone.</p>
+  <div class="who-form" id="who-form" hidden>
+    <h2 id="who-form-h">New player</h2>
+    <label for="who-name" hidden>Player</label>
+    <input id="who-name" hidden maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="">
+    <p class="who-lbl">Pick an avatar</p>
+    <div class="who-emojis" id="who-emojis"></div>
+    <p class="who-err" id="who-err" aria-live="polite"></p>
+    <div class="who-bands" id="who-bands" hidden></div>
+    <button class="btn btn-go" id="who-save" type="button">Next: pick an age group</button>
+    <div class="sub-actions"><button class="link-btn" id="who-cancel" type="button">Cancel</button><button class="link-btn danger" id="who-del" type="button" hidden>Remove this player</button></div>
+  </div>
+  <p class="privacy">🔒 Players live only on this phone. Each has their own streak, points, age group, and recordings. Names never leave this device; anonymous counts and app steps use only a random player number.</p>
+</main>
+
+<!-- 4d. Kids Pitch Night (prelims): entry form -> record (v-rec) -> feedback + submit (v-fb) -> confirmation. /pitch or /?pitch=1 -->
+<main class="view" id="v-pitch" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="pn-close" aria-label="Back to today's challenge">✕</button>
+    <span class="bar-title">Kids Pitch Night</span>
+    <button class="icon-btn" type="button" data-share aria-label="Share Kids Pitch Night">↗</button>
+  </div>
+  <section class="pn-hero">
+    <p class="kicker"><span class="free-pill">FREE</span> Ages 5-18</p>
+    <h1>🏆 Kids Pitch Night</h1>
+    <p class="pn-line">Practice a 1-minute pitch. Tips stay on this phone. We do not keep a name or a recording.</p>
+  </section>
+  <div class="pn-gate" id="pn-gate" hidden>
+    <p class="pn-gate-p">👨‍👩‍👧 <b>Grown-ups:</b> Pitch Night entries need a parent's name and email.</p>
+    <button class="btn btn-go" id="pn-gate-btn" type="button">Grown-up: open the entry form</button>
+  </div>
+  <form class="pn-form" id="pn-form" novalidate>
+    <label for="pn-parent">Your name (parent or guardian)</label>
+    <input id="pn-parent" name="parent" maxlength="60" autocomplete="name" autocapitalize="words" required>
+    <p class="pn-ferr" data-err="parent"></p>
+    <label for="pn-email">Your email</label>
+    <input id="pn-email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+    <p class="pn-ferr" data-err="email"></p>
+    <div class="pn-two">
+      <div hidden><label for="pn-kid">Not collected</label>
+        <input id="pn-kid" name="kid" maxlength="30" autocomplete="off" value="" tabindex="-1">
+        <p class="pn-ferr" data-err="kid"></p></div>
+      <div class="pn-age"><label for="pn-age">Age</label>
+        <select id="pn-age" name="age" required><option value="">Pick</option></select>
+        <p class="pn-ferr" data-err="age"></p></div>
+    </div>
+    <label for="pn-phone">Your phone <small>(optional)</small></label>
+    <input id="pn-phone" name="phone" type="tel" maxlength="22" autocomplete="tel" inputmode="tel">
+    <p class="pn-ferr" data-err="phone"></p>
+    <label class="pn-consent"><input type="checkbox" id="pn-consent" name="consent" required> <span id="pn-consent-t"></span></label>
+    <p class="pn-ferr" data-err="consent"></p>
+    <button class="btn btn-go" id="pn-next" type="submit">🎤 Next: record the pitch</button>
+  </form>
+  <section class="pn-closed" id="pn-closed" hidden>
+    <h2>Entries closed</h2>
+    <p>Pitch practice stays on this phone. We do not keep a child's name, photo, or recording.</p>
+    <p class="pn-finals" id="pn-finals"></p>
+    <button class="btn btn-go" type="button" id="pn-closed-home">🎤 Try today's free challenge</button>
+  </section>
+  <section class="pn-done" id="pn-done" hidden>
+    <div class="pn-done-e" aria-hidden="true">🎉</div>
+    <h2 id="pn-done-h">You're in!</h2>
+    <p class="pn-done-p" id="pn-done-p"></p>
+    <p class="pn-finals" hidden><a id="pn-map" hidden></a></p>
+    <p class="pn-share-h">Know another kid with a big idea? Share Pitch Night:</p>
+    <div class="share-row" id="pn-share"></div>
+    <button class="btn btn-go" type="button" id="pn-done-home">🎤 Try today's free challenge</button>
+    <div class="sub-actions"><button class="link-btn" type="button" id="pn-again">↺ Re-record</button><button class="link-btn" type="button" id="pn-another">➕ Practice another pitch</button></div>
+  </section>
+  <p class="privacy pn-privacy">Pitch tips stay on this phone. We do not keep a child's name, photo, or recording.</p>
+</main>
+
+<!-- 5. Share card -->
+<main class="view" id="v-share" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="share-close" aria-label="Back to feedback">←</button>
+    <span class="bar-title">Share your win</span>
+    <button class="icon-btn" type="button" id="share-home" aria-label="Go to today's challenge">⌂</button>
+  </div>
+  <div class="card-wrap"><img id="card-img" alt="Share card" width="1080" height="1350"></div>
+  <div class="share-row" id="share-row"></div>
+  
+  <p class="privacy">No names, no voice. Just the challenge, scores, and streak.</p>
+</main>
+
+<!-- 6. My recordings (on this device only) -->
+<main class="view" id="v-recs" hidden>
+  <div class="bar">
+    <button class="icon-btn" type="button" id="recs-close" aria-label="Back to today's challenge">←</button>
+    <span class="bar-title">My recordings</span>
+    <button class="icon-btn" type="button" data-share aria-label="Share this app">↗</button>
+  </div>
+  <p class="privacy">Saved on this phone only (last 7 days, one per day). Never uploaded for storage.</p>
+  <ul class="recs" id="recs-list"></ul>
+  <button class="btn btn-go" type="button" id="recs-go">🎤 Record today's challenge</button>
+</main>
+
+<!-- Share sheet (any screen) -->
+<div class="sheet-bg" id="sheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheet-h">
+    <p class="sheet-h" id="sheet-h">Share</p>
+    <p class="sheet-text" id="sheet-text"></p>
+    <div class="share-row" id="sheet-row"></div>
+    <button class="link-btn" type="button" id="sheet-close">Close</button>
+  </div>
+</div>
+
+<!-- Book a free trial class (grown-ups). Direct link: gpskids.app/#trial (no grown-up check: it is a form for grown-ups). trial.js -->
+<main class="view" id="v-trial" hidden>
+  <button class="link-btn back-link" id="tr-kids" type="button">⬅️ Back to kids</button>
+  <section class="pn-hero tr-hero">
+    <p class="kicker"><span class="free-pill">FREE</span> Ages 5-17</p>
+    <h1>🎤 Book a free trial class</h1>
+    <p class="pn-line">Kids practice speaking with a coach and other kids. One hour, and it's free.</p>
+    <p class="tr-place" hidden></p>
+  </section>
+  <form class="pn-form" id="tr-form" novalidate>
+    <label for="tr-parent">Your name</label>
+    <input id="tr-parent" name="parent" maxlength="40" autocomplete="name" autocapitalize="words">
+    <p class="pn-ferr" data-err="parent"></p>
+    <label for="tr-phone">Your phone number</label>
+    <input id="tr-phone" name="phone" type="tel" maxlength="25" autocomplete="tel" inputmode="tel" placeholder="555 201 0123">
+    <p class="pn-ferr" data-err="phone"></p>
+    <label for="tr-kid" hidden>Not collected</label>
+    <input id="tr-kid" name="kid" hidden value="" tabindex="-1" autocomplete="off">
+    <p class="pn-ferr" data-err="kid"></p>
+    <label for="tr-age">Child's age</label>
+    <select id="tr-age" name="age"><option value="">Pick an age</option></select>
+    <p class="pn-ferr" data-err="age"></p>
+    <p class="tr-lbl" id="tr-day-l">Pick a day</p>
+    <div class="tr-days" role="radiogroup" aria-labelledby="tr-day-l">
+      <label class="tr-day"><input type="radio" name="day" value="tue"> <span><b>Tuesday</b><small>6 to 7 PM</small></span></label>
+      <label class="tr-day"><input type="radio" name="day" value="thu"> <span><b>Thursday</b><small>6 to 7 PM</small></span></label>
+    </div>
+    <p class="pn-ferr" data-err="day"></p>
+    <div class="tr-hp" aria-hidden="true"><label for="tr-web">Leave this empty</label><input id="tr-web" name="website" tabindex="-1" autocomplete="off"></div>
+    <p class="who-err" id="tr-err" aria-live="polite"></p>
+    <button class="btn btn-go" id="tr-send" type="submit">✅ Book my free class</button>
+  </form>
+  <section class="tr-done" id="tr-done" hidden>
+    <p class="tr-done-e" aria-hidden="true">🎉</p>
+    <h2 id="tr-done-h">Thank you!</h2>
+    <p class="pn-line">We will text you to confirm.</p>
+    <p class="tr-done-s" id="tr-done-s"></p>
+    <p class="tr-place" hidden></p>
+    <button class="btn btn-go" id="tr-done-club" type="button">🏫 See classes and sign up</button>
+  </section>
+</main>
+
+<!-- GPS Kids Speaking Leaderboard (PREVIEW). Rules + points: prize.js. A grown-up joins for the kid (math check first). -->
+<main class="view" id="v-prize" hidden>
+  <div class="bar"><button class="icon-btn" type="button" id="pz-close" aria-label="Back to today's challenge">✕</button><span class="bar-title" id="pz-bar-t">Leaderboard</span><span></span></div>
+  <section class="pn-hero">
+    <p class="kicker"><span class="free-pill">FREE</span> Ages 5-17 · Just for fun</p>
+    <h1>🏆 Speaking Leaderboard</h1>
+    <p class="pn-line">Do your challenge every day and climb the board. A new week starts every Monday.</p>
+  </section>
+  <section class="pz-me" id="pz-me" hidden>
+    <p class="pz-me-h" id="pz-me-h"></p>
+    <p class="pz-pts"><b id="pz-pts">0</b> points this week</p>
+    <p class="pz-me-s" id="pz-me-s"></p>
+    <button class="btn btn-go" id="pz-go" type="button">🎤 Today's challenge</button>
+    <p class="pz-done" id="pz-done" hidden>✅ Done for today! Come back tomorrow. You can still practice (no points).</p>
+    <p class="pz-friend" id="pz-friend"></p>
+    <button class="link-btn" id="pz-invite" type="button">🤝 Bring a friend</button>
+  </section>
+  <ul class="pz-how">
+    <li><b>⭐ Your first challenge each day</b><span>10 points</span></li>
+    <li><b>🔥 Did it yesterday too</b><span>+5 points</span></li>
+    <li><b>🎯 Speak clearly, at a good speed, with confidence</b><span>up to +10</span></li>
+    <li><b>🤝 A friend joins and does a challenge</b><span>+25 points</span></li>
+  </ul>
+  <p class="pz-note">Only your first challenge each day counts, for everyone. After that it is Practice. Practice helps you get better, but gives no points.</p>
+  <div class="pn-gate" id="pz-gate">
+    <p class="pn-gate-p">⭐ Points stay on this phone. This public copy does not publish a board or store a child's name.</p>
+    <button class="btn btn-go" id="pz-start" type="button">🎤 Today's challenge</button>
+  </div>
+  <form class="pn-form" id="pz-form" novalidate hidden>
+    <p class="pz-form-h" id="pz-form-h">The public board is off</p>
+    <p class="pz-form-s" id="pz-form-s">Points stay on this phone. We do not store a child's name.</p>
+    <label for="pz-kid" hidden>Not collected</label>
+    <input id="pz-kid" name="kid" hidden value="" tabindex="-1" autocomplete="off">
+    <p class="pn-ferr" data-err="kid"></p>
+    <label for="pz-init" hidden>Not collected</label>
+    <input id="pz-init" name="init" hidden value="" tabindex="-1" autocomplete="off">
+    <p class="pn-ferr" data-err="init"></p>
+    <label for="pz-age">Child's age</label>
+    <select id="pz-age" name="age"><option value="">Pick an age</option></select>
+    <p class="pn-ferr" data-err="age"></p>
+    <label for="pz-email">Your email <small>(only to reach you about the leaderboard, never shown)</small></label>
+    <input id="pz-email" name="email" type="email" maxlength="120" autocomplete="email" inputmode="email">
+    <p class="pn-ferr" data-err="email"></p>
+    <label class="pn-consent" hidden><input type="checkbox" id="pz-show"> <span>The public board is off. We do not show a child's name.</span></label>
+    <label class="pn-consent"><input type="checkbox" id="pz-consent"> <span id="pz-consent-t"></span></label>
+    <p class="pn-ferr" data-err="consent"></p>
+    <button class="btn btn-go" id="pz-send" type="submit">Make the account</button>
+    <button class="link-btn" type="button" id="pz-form-x">Cancel</button>
+  </form>
+  <div class="pz-tabs" role="tablist">
+    <button type="button" class="pz-tab on" id="pz-t-week" role="tab">This week</button>
+    <button type="button" class="pz-tab" id="pz-t-month" role="tab">This month</button>
+  </div>
+  <section class="pz-board">
+    <h2 class="pz-bh"><span id="pz-bh">🏆 This week</span> <small id="pz-week"></small></h2>
+    <ol class="pz-list" id="pz-list"></ol>
+    <p class="pz-empty" id="pz-empty" hidden>No points yet. Be the first!</p>
+    <p class="pz-note">The public leaderboard is off. Points stay on this phone.</p>
+  </section>
+  <div class="pz-grown" id="pz-grown" hidden>
+    <button class="link-btn" type="button" id="pz-hide">Grown-ups: hide from the board</button>
+    <button class="link-btn" type="button" id="pz-leave">Grown-ups: leave and delete our info</button>
+  </div>
+  <p class="pz-rules"><a href="/prize-rules.html" target="_blank" rel="noopener">Leaderboard rules</a> · Run by GPS Kids. Free, just for fun.</p>
+</main>
+
+<!-- Buddy play: two kids, one phone, no mic, no AI (buddy.js + buddy-games.js). Saved on this phone so it can resume. -->
+<main class="view" id="v-buddy" hidden>
+  <div class="bar"><span class="bar-title">👫 Buddy play</span><button class="icon-btn" type="button" id="bd-close" aria-label="Close buddy play">✕</button></div>
+  <section class="bd-sec" id="bd-setup" hidden>
+    <h1 class="bd-h">Who's playing?</h1>
+    <p class="bd-sub">Two kids, one phone. Take turns talking out loud. No mic, nothing recorded.</p>
+    <div class="bd-players" id="bd-players"></div>
+    <p class="bd-lbl" id="bd-type-lbl" hidden>Two buddies</p>
+    <div class="bd-names" hidden><input id="bd-n1" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Buddy A" aria-label="First buddy" value="Buddy A"><input id="bd-n2" maxlength="16" autocomplete="off" autocapitalize="words" spellcheck="false" placeholder="Buddy B" aria-label="Second buddy" value="Buddy B"></div>
+    <p class="who-err" id="bd-err" aria-live="polite"></p>
+    <button class="btn btn-go" id="bd-next" type="button">Pick a game</button>
+  </section>
+  <section class="bd-sec" id="bd-resume" hidden>
+    <div class="bd-big" aria-hidden="true">⏯️</div>
+    <h1 class="bd-h" id="bd-resume-h">Keep playing?</h1>
+    <button class="btn btn-go" id="bd-resume-yes" type="button">Keep playing</button>
+    <button class="link-btn" id="bd-resume-new" type="button">Start a new game</button>
+  </section>
+  <section class="bd-sec" id="bd-games" hidden>
+    <h1 class="bd-h" id="bd-games-h">Pick a game</h1>
+    <div class="bd-game-list" id="bd-game-list"></div>
+    <button class="link-btn" id="bd-change" type="button">Change players</button>
+  </section>
+  <section class="bd-sec bd-turn" id="bd-turn" hidden>
+    <p class="bd-count" id="bd-count"></p>
+    <h1 class="bd-your" id="bd-your"></h1>
+    <p class="bd-prompt" id="bd-prompt"></p>
+    <p class="bd-tip" id="bd-tip"></p>
+    <button class="btn btn-go" id="bd-done" type="button">Done!</button>
+  </section>
+  <section class="bd-sec bd-pass" id="bd-pass" hidden>
+    <div class="bd-big" aria-hidden="true">📱➡️</div>
+    <h1 class="bd-your" id="bd-pass-h"></h1>
+    <p class="bd-sub">No peeking until it's your turn!</p>
+    <button class="btn btn-go" id="bd-ready" type="button"></button>
+  </section>
+  <section class="bd-sec" id="bd-finish" hidden>
+    <div class="bd-big bd-party" aria-hidden="true">🎉🏆🎉</div>
+    <h1 class="bd-your" id="bd-fin-h"></h1>
+    <p class="bd-sub" id="bd-fin-p"></p>
+    <button class="btn btn-go" id="bd-again" type="button">Play another game</button>
+    <button class="link-btn" id="bd-home" type="button">Back home</button>
+  </section>
+  <p class="privacy">🔒 Nothing is recorded. Names stay on this phone.</p>
+</main>
+
+<!-- Belt-up celebration + kid-safe share card (first name only, no link) -->
+<div class="sheet-bg" id="belt-sheet" hidden>
+  <div class="sheet modal belt-modal" role="dialog" aria-modal="true" aria-labelledby="belt-h">
+    <div class="belt-big" id="belt-big" aria-hidden="true"><span>🥋</span></div>
+    <p class="modal-h" id="belt-h"></p>
+    <p class="modal-p" id="belt-p"></p>
+    <img class="belt-card" id="belt-card" alt="Your speaking belt card" hidden>
+    <div class="belt-share"><button class="btn btn-friend" id="belt-share" type="button">↗ Share my belt</button></div>
+    <button class="link-btn" id="belt-ok" type="button">Yay! Close</button>
+  </div>
+</div>
+
+<!-- Grown-up check (web). The store app uses the native ParentGate instead. -->
+<div class="sheet-bg" id="gu-sheet" hidden>
+  <div class="sheet modal" role="dialog" aria-modal="true" aria-labelledby="gu-h">
+    <p class="modal-h" id="gu-h">👨‍👩‍👧 Grown-ups only</p>
+    <p class="modal-p" id="gu-reason"></p>
+    <p class="modal-p"><b id="gu-q"></b></p>
+    <input id="gu-in" class="gu-in" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Answer" placeholder="Answer">
+    <p class="who-err" id="gu-err" aria-live="polite"></p>
+    <button class="btn btn-go" type="button" id="gu-ok">Continue</button>
+    <button class="link-btn" type="button" id="gu-cancel">Cancel</button>
+  </div>
+</div>
+
+<!-- Badge / premium modal -->
+<div class="sheet-bg" id="modal" hidden>
+  <div class="sheet modal" role="dialog" aria-modal="true" aria-labelledby="modal-h">
+    <div class="modal-emoji" id="modal-emoji" aria-hidden="true">🏆</div>
+    <p class="modal-h" id="modal-h"></p>
+    <p class="modal-p" id="modal-p"></p>
+    <a class="btn btn-wa" id="modal-wa" href="" target="_blank" rel="noopener" hidden>💬 Get updates in the WhatsApp group</a>
+    <button class="btn btn-go" type="button" id="modal-ok">Yay!</button>
+  </div>
+</div>
+
+<!-- Take me home: a QR of gpskids.app/#home=<progress>. Scan with the home phone's camera. -->
+<div class="sheet-bg" id="home-sheet" hidden>
+  <div class="sheet home-sheet" role="dialog" aria-modal="true" aria-labelledby="home-h">
+    <p class="sheet-h" id="home-h">🏠 Take me home</p>
+    <p class="home-p">Open the camera on your home phone or tablet and point it here. Your streak comes with you.</p>
+    <div class="home-qr" id="home-qr"></div>
+    <p class="home-who" id="home-who"></p>
+    <button class="link-btn" id="home-send" type="button">↗ No camera? Send the link</button>
+    <input class="home-link" id="home-link" readonly hidden aria-label="Take me home link">
+    <p class="home-note">Scores travel inside this link. No name is included. Nothing is saved on our server.</p>
+    <button class="btn btn-go" id="home-close" type="button">Done</button>
+  </div>
+</div>
+
+<!-- Voice settings (PREVIEW) -->
+<div class="sheet-bg" id="vsheet" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="vsheet-h">
+    <p class="sheet-h" id="vsheet-h">🔈 Coach voice</p>
+    <label class="vline"><input type="checkbox" id="vs-on"> <span>Coach talks out loud</span></label>
+    <label class="vline" for="vs-voice">Device voice</label>
+    <select id="vs-voice"></select>
+    <p class="vs-note" id="vs-note"></p>
+    <button class="btn btn-go" type="button" id="vs-test">▶ Test voice</button>
+    <p class="vs-note">Coach is a computer voice. Grown-ups can turn it off anytime.</p>
+    <button class="link-btn" type="button" id="vs-close">Close</button>
+  </div>
+</div>
+<audio id="coach-audio" playsinline preload="auto" hidden></audio>
+
+<!-- One-stop: Parent / Coach / Partner (opened from "Who are you?") -->
+<div class="sheet-bg" id="role-sheet" hidden>
+  <div class="sheet role-sheet" role="dialog" aria-modal="true" aria-labelledby="role-h">
+    <button class="link-btn back-link" id="role-kids" type="button">⬅️ Back to kids</button>
+    <h2 class="sheet-h" id="role-h"></h2>
+    <div id="role-body"></div>
+  </div>
+</div>
+<!-- Coach notes for one kid (class report). A simple coach code first, once per visit. Saved on this phone only. -->
+<div class="sheet-bg" id="note-sheet" hidden>
+  <div class="sheet note-sheet" role="dialog" aria-modal="true" aria-labelledby="note-h">
+    <h2 class="sheet-h" id="note-h">Coach notes</h2>
+    <div id="note-gate" hidden>
+      <p class="sheet-text">Coaches only. Type the coach code.</p>
+      <input id="note-code" class="note-in" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="Coach code" aria-label="Coach code">
+      <p class="who-err" id="note-code-err" aria-live="polite"></p>
+      <button class="btn btn-go" id="note-code-go" type="button">Open notes</button>
+    </div>
+    <div id="note-main" hidden>
+      <p class="sheet-text">Tap a note. Tap again to remove it. Parents see today's notes.</p>
+      <div class="note-chips" id="note-chips"></div>
+      <div class="note-own"><input id="note-text" class="note-in" maxlength="60" autocomplete="off" placeholder="Or type your own short note" aria-label="Your own note"><button class="btn btn-go note-add" id="note-add" type="button">Add</button></div>
+      <p class="who-err" id="note-err" aria-live="polite"></p>
+      <ul class="note-list" id="note-list"></ul>
+    </div>
+    <button class="link-btn note-close" id="note-close" type="button">Done</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+<noscript><p class="privacy">Please turn on JavaScript to play the GPS Kids speaking challenge.</p></noscript>
+<script type="module" src="/freecoach.js?v=1"></script>
+<script type="module" src="/try.js?v=1"></script>
+<script type="module" src="/app.js?v=1"></script>
+</body>
+</html>

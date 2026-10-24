@@ -1,0 +1,17 @@
+{
+  "id": "speak",
+  "name": "Speak",
+  "task": "a 1 minute pitch",
+  "rebutTask": "a friendly challenge question about their pitch",
+  "tips": [
+    "clarity (was the main idea easy to follow)",
+    "pace and energy",
+    "a strong opener and a strong close"
+  ],
+  "challengeAbout": "cost, safety, who would use it, what could go wrong, or why it is better",
+  "challenges": [
+    "Tell us about an idea you love. You have 1 minute.",
+    "Invent something that would make school more fun. Pitch it in 1 minute.",
+    "Pitch a new snack. Why should we try it?"
+  ]
+}

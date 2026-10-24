@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>GPS Kids Speak · usage stats (admin)</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+  :root { --ink: #14213d; --muted: #4c5873; --line: #dbe3ee; --blue: #1458d4; --soft: #e8f0fe; --red: #c23a2f; --green: #137a3c; }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: #fbf8ef; color: var(--ink); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 14px; display: grid; gap: 12px; }
+  h1 { margin: 0; font-size: 1.35rem; } h2 { margin: 0 0 8px; font-size: 1.02rem; }
+  .muted { color: var(--muted); font-size: .85rem; margin: 0; }
+  .login { display: grid; gap: 8px; max-width: 420px; }
+  input { font: inherit; font-size: 16px; padding: 8px 10px; border: 2px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink); }
+  button { font: inherit; font-weight: 700; padding: 8px 12px; border-radius: 12px; border: 2px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; }
+  button.on, .primary { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .err { color: var(--red); font-weight: 700; margin: 0; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 10px 12px; }
+  .card b { display: block; font-size: 1.5rem; font-weight: 800; color: var(--blue); }
+  .card span { font-size: .82rem; color: var(--muted); font-weight: 600; }
+  .grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 860px) { .grid { grid-template-columns: 1fr 1fr; } }
+  section.box { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
+  .fun { display: grid; gap: 8px; }
+  .fr { display: grid; grid-template-columns: 9.5em 1fr 3.2em; gap: 8px; align-items: center; font-size: .9rem; }
+  .bar { background: #eef2f8; border-radius: 8px; height: 22px; position: relative; overflow: hidden; }
+  .bar i { position: absolute; inset: 0 auto 0 0; background: var(--blue); border-radius: 8px; }
+  .fr em { grid-column: 2 / 4; margin-top: -5px; font-style: normal; font-size: .76rem; color: #5b6475; }
+  .fr .n { text-align: right; font-weight: 800; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+  td.r, th.r { text-align: right; }
+  ol.drops { margin: 0; padding-left: 1.3em; display: grid; gap: 4px; }
+  .tag { font-size: .72rem; font-weight: 800; border-radius: 999px; padding: 2px 8px; background: #ffe1de; color: var(--red); }
+  #growth table { font-size: .86rem; }
+  #growth th { font-size: .74rem; line-height: 1.15; vertical-align: bottom; color: var(--muted); }
+  #growth td:first-child { white-space: nowrap; font-weight: 600; }
+  #growth td.r b { color: var(--blue); }
+  #growth tr.tot td { font-weight: 800; border-top: 2px solid var(--ink); }
+  #growth dl { margin: 8px 0 0; font-size: .8rem; color: var(--muted); display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; }
+  #growth dt { font-weight: 800; } #growth dd { margin: 0; }
+  details summary { cursor: pointer; font-weight: 700; color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>📊 GPS Kids Speak · usage</h1>
+  <form class="login" id="login" hidden>
+    <label for="key">Admin key</label>
+    <input id="key" type="password" autocomplete="current-password" spellcheck="false">
+    <button class="primary" type="submit">Open stats</button>
+    <p class="err" id="login-err" hidden></p>
+    <p class="muted">The key stays in this browser tab only (cleared when you close it).</p>
+  </form>
+  <section id="app" hidden>
+    <div class="tools" id="ranges">
+      <button type="button" data-r="1">Today</button>
+      <button type="button" data-r="y">Yesterday</button>
+      <button type="button" data-r="7">Last 7 days</button>
+      <button type="button" data-r="30">Last 30 days</button>
+      <input type="date" id="from" aria-label="From"> <input type="date" id="to" aria-label="To">
+      <button type="button" id="apply">Show</button>
+      <label class="muted"><input type="checkbox" id="show-test"> test traffic</label>
+      <button type="button" id="logout">Sign out</button>
+    </div>
+    <p class="muted" id="range-line"></p>
+    <p class="err" id="err" hidden></p>
+    <section class="box" id="growth"><h2>📈 Growth, last 14 days</h2><p class="muted" id="growth-msg">Loading…</p><div id="growth-out"></div></section>
+    <div id="out"></div>
+    <p class="muted">Anonymous first-party events only: random hashed player / device / session numbers, the step and its time. No names, emails, ages, words or audio. Days are Eastern Time. A step's time is capped at 30 min; time with the app hidden is not counted.</p>
+  </section>
+</main>
+<script src="/stats.js?v=1"></script>
+</body>
+</html>

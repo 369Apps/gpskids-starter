@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/369Apps/gpskids-starter/security/advisories/new
+    about: Private reports only. Do not post secrets or a child's information.

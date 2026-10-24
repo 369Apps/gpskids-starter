@@ -1,0 +1,25 @@
+// Coach notes + notes inside the Take me home link. usage: node tests/notes.test.mjs
+import * as N from "../public/notes.js";
+import * as K from "../public/kidcode.js";
+let n = 0, f = 0; const ok = (c, m) => { n++; console.log((c ? "PASS " : "FAIL ") + m); if (!c) f++; };
+ok(!N.codeOk("coach") && !N.codeOk(" COACH ") && !N.codeOk("1234") && !N.codeOk(""), "there is no shared coach code");
+ok(N.QUICK.every(N.okNote) && N.QUICK.every((q) => !/—/.test(q)), "quick notes are valid plain words, no em dashes");
+for (const bad of ["a", "call 5551234567", "mom@mail.com", "see www.x.io", "x".repeat(61), "<b>hi</b>", "Great — job"]) ok(!N.okNote(bad), "refused: " + bad.slice(0, 20));
+ok(N.okNote("Loud and clear, nice smile!"), "typed note ok");
+let l = N.add([], "2026-10-15", "Strong start").list; l = N.add(l, "2026-10-15", "Strong start").list;
+ok(l.length === 1, "same note twice = one");
+for (let i = 0; i < 8; i++) l = N.add(l, "2026-10-" + String(10 + i).padStart(2, "0"), "Note " + "abcdefgh"[i]).list;
+ok(l.length === N.MAX_NOTES && l[l.length - 1].d === "2026-10-17", "keeps the newest " + N.MAX_NOTES);
+ok(N.remove([{ d: "2026-10-15", t: "Slow down" }], "2026-10-15", "Slow down").length === 0, "remove");
+ok(N.forParent([{ d: "2026-10-15", t: "Speak louder" }, { d: "2026-10-14", t: "Old" }], "2026-10-15") === " Coach notes: Speak louder.", "parent text: today's notes only");
+const snap = { ...K.emptySnap(), name: "Sam", emoji: "🐼", band: "explorers", code: "ROAR-4821", days: ["2026-10-15"], notes: [{ d: "2026-10-15", t: "Great eye contact" }] };
+const d = K.decode(K.encode(snap));
+ok(d.ok && d.snap.notes.length === 1 && d.snap.notes[0].t === "Great eye contact", "notes ride in the Take me home link");
+const d0 = K.decode(K.encode({ ...snap, notes: [] }));
+ok(d0.ok && d0.snap.notes.length === 0 && JSON.parse(Buffer.from(K.encode({ ...snap, notes: [] }).split(".")[1], "base64url")).length === 10, "no notes = same 10-slot link as before");
+const m = K.merge({ ...snap, notes: [{ d: "2026-10-13", t: "Stand tall" }] }, snap);
+ok(m.notes.length === 2, "merge keeps notes from both phones");
+const forged = JSON.parse(Buffer.from(K.encode(snap).split(".")[1], "base64url")); forged[10] = [[2480, "mom@mail.com"]];
+const body = "1." + Buffer.from(JSON.stringify(forged)).toString("base64url");
+ok(!K.decode(body + "." + K.check(body)).ok, "forged link with an email in a note is refused");
+console.log(f ? `${n - f}/${n} FAILED ${f}` : `${n}/${n} ALL PASSED`); process.exit(f ? 1 : 0);

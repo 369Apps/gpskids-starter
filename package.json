@@ -1,0 +1,10 @@
+{
+  "name": "gpskids-speak",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "test": "node tests/coppa.test.mjs && node tests/notes.test.mjs && node tests/kidcode.test.mjs && node tests/belts.test.mjs && node tests/buddy.test.mjs && node tests/examples.test.mjs && node tests/classnight.test.mjs && node tests/club-week.test.mjs && node tests/path.test.mjs",
+    "dev": "npx wrangler pages dev public"
+  }
+}

@@ -1,0 +1,17 @@
+# GPS Kids
+
+> GPS Kids is a free public speaking coach for kids ages 5 to 17. Kids tap to talk with a kind AI coach, practice short talks, and get one small tip at a time, with points and streaks.
+
+## Key facts
+- Website: https://gpskids.app
+- Ages: 5 to 17, in age groups.
+- Free plan: free forever, no account needed. A daily speaking challenge with kind AI tips, points and streaks.
+- Founding Family plan: 20 dollars a month, unlimited practice. When a friend's family joins, both families get a free month. 30-day money-back guarantee.
+- Safety: a grown-up starts each talk with the AI coach and kids join with them. Audio is not stored. The coach never asks kids for their name, school, address or contact info. The coach is an AI, not a person.
+- In-person classes: small group classes at GPS Kids headquarters, 1740 Grassland Parkway, Unit 202, Alpharetta, Georgia 30004.
+
+## Pages
+- [Home: talk to the AI coach](https://gpskids.app/)
+- [Plans and sign up](https://gpskids.app/try)
+- [Public speaking for kids](https://gpskids.app/public-speaking)
+- [Privacy](https://gpskids.app/privacy)

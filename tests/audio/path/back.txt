@@ -1,0 +1,5 @@
+Have you ever wondered how a funny cat video gets to your phone in one second?
+Here is my big idea. The internet is a giant team of computers that pass your video along in tiny pieces called packets.
+First, the video lives on a big computer called a server.
+Then the server chops the video into little packets, and each packet travels through cables, even under the ocean, to your house.
+Finally, your phone puts the packets back together, and the video plays. So the internet is like super fast mail for video. Thank you!

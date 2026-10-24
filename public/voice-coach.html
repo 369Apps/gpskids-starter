@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><title>AI Coach | GPS Kids Speak</title>
+<link rel="stylesheet" href="/voice-coach.css?v=1"></head>
+<body>
+<main>
+<!-- 1. Grown-up switch (consent) -->
+<section class="scr" id="s-consent">
+  <p class="tag">Coach <span class="pv">preview</span></p>
+  <p class="paid" id="paid" hidden>Thank you! Your plan is ready.</p>
+  <h1>Talk, then get 3 tips!</h1>
+  <p class="sub">How old are you?</p>
+  <div class="ages" role="radiogroup">
+    <button class="age" data-band="little" role="radio">5 to 8</button>
+    <button class="age on" data-band="middle" role="radio">9 to 12</button>
+    <button class="age" data-band="teen" role="radio">13 to 17</button>
+  </div>
+  <div class="grown">
+    <p class="gh">For a grown-up</p>
+    <label class="sw"><input type="checkbox" id="consent"><span></span>Grown-up: OK for Coach to listen to the recording?</label>
+    <div class="gate" id="gate" hidden>
+      <p class="q2">Grown-ups only: what is <b id="ga"></b> + <b id="gb"></b>?</p>
+      <div class="garow"><input id="gans" inputmode="numeric" maxlength="2" aria-label="Answer"><button class="hear" id="gok">OK</button></div>
+      <p class="fine">What happens: your child talks for up to 1 minute. Coach listens to the sound once to write down the words, gives 3 tips, and then the sound is thrown away. We never ask for your child's name. You can turn this off any time.</p>
+      <p class="fine bad" id="gerr" hidden>Not quite. Try again.</p>
+    </div>
+    <p class="fine" id="consent-at" hidden></p>
+    <ul class="alerts" id="alerts" hidden></ul>
+    <div class="pcard" id="pcard" hidden><p><b>Your teen tried live practice with Coach!</b></p>
+      <p class="fine">Founding Family, $20 a month: everything in Free, unlimited, plus 60 minutes of live conversation. And a Pitch Night spot.</p>
+      <button class="hear" id="pcard-up">Upgrade for $20 a month</button><p class="fine" id="pcard-note" hidden></p></div>
+    <p class="fine">We listen once, then throw the sound away. We never save it, and we never ask for a name. Tips are just for practice. They never change prizes or finals.</p>
+    <p class="mins" id="mins">Checking minutes...</p>
+    <ul class="fam" id="fam" hidden></ul>
+    <label class="plan" hidden>Test plan (preview only, no charge)
+      <select id="plan"><option value="free">Free: 10 min a day</option><option value="p20">Founding Family $20: unlimited + 60 live min</option><option value="p100">Pro $100: unlimited + 300 live min</option><option value="p200">All Access $200: unlimited + 600 live min</option></select></label>
+    <label class="sw" id="optin-row" hidden><input type="checkbox" id="optin"><span></span>Also OK for live talk with Coach (ages 13 to 17).</label>
+  </div>
+  <div class="ref" id="ref" hidden><p class="gh">Invite a friend</p>
+    <p class="fine">When a friend's family joins, you both get 1 free month.</p>
+    <p class="code">Your code: <b id="refcode"></b></p><button class="hear" id="refshare">Share invite link</button>
+    <p class="fine" id="refstat"></p></div>
+  <button class="big" id="go" disabled>Let's go!</button>
+</section>
+
+<!-- 2. Record -->
+<section class="scr" id="s-rec" hidden>
+  <p class="tag">Coach <span id="round-tag">Your pitch</span></p>
+  <h1 id="rec-title">Pitch your idea!</h1>
+  <p class="q" id="rec-q">Tell us about an idea you love. You have 1 minute.</p>
+  <div class="timer" id="timer" role="img" aria-label="Practice progress"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#dbe3ee" stroke-width="10"/><circle id="timer-fill" cx="60" cy="60" r="50" fill="none" stroke="#137a3c" stroke-width="10" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="314" transform="rotate(-90 60 60)"/></svg></div>
+  <button class="big rec" id="rec">Start talking</button>
+  <p class="fine" id="rec-hint">Tap again when you are done.</p>
+</section>
+
+<!-- 3. Thinking -->
+<section class="scr" id="s-think" hidden>
+  <p class="tag">Coach</p><div class="spin"></div><h1 id="think-t">Listening to you...</h1><div class="bar"><i id="think-bar"></i></div>
+</section>
+
+<!-- 4. Tips -->
+<section class="scr" id="s-tips" hidden>
+  <p class="tag">Coach <span id="tips-tag">Your tips</span></p>
+  <h1 id="tips-title">Great job!</h1>
+  <p class="pts" id="pts" hidden></p>
+  <p class="streak" id="streak" hidden></p>
+  <ol class="tips" id="tips"></ol>
+  <button class="hear" id="hear">🔊 Hear it</button>
+  <button class="big" id="next">Answer back!</button>
+  <div class="upsell" id="upsell" hidden><p>Want to practice live with your Coach? Try 3 minutes free.</p><button class="hear" id="live">Try it live</button></div>
+  <p class="fine" id="live-soon" hidden>Live talk with Coach is coming soon.</p>
+  <button class="link" id="again">Start over</button>
+</section>
+
+<!-- 5. Answer back! (opponent) -->
+<section class="scr" id="s-opp" hidden>
+  <p class="tag">Answer back! <span id="opp-round">Round 1 of 3</span></p>
+  <div class="bubble"><b>🙂 Friendly challenger</b><p id="opp-line"></p></div>
+  <button class="hear" id="opp-hear">🔊 Hear it again</button>
+  <button class="big" id="opp-go">Answer it!</button>
+</section>
+
+<!-- 6. Done -->
+<section class="scr" id="s-done" hidden>
+  <p class="tag">Answer back!</p><h1>You did all 3 rounds!</h1>
+  <p class="pts big-pts" id="done-pts"></p>
+  <p class="streak" id="done-streak"></p>
+  <p class="sub">Your points go on the leaderboard.</p>
+  <button class="big" id="done-again">Play again</button>
+</section>
+
+<!-- Live taste is over -->
+<section class="scr" id="s-tasted" hidden>
+  <p class="tag">Coach <span>Live</span></p><div class="zzz">🎤</div><h1>Great live practice!</h1>
+  <p class="q">Ask your grown-up for more live time.</p>
+  <button class="big" id="tasted-ok">OK</button>
+</section>
+
+<!-- Out of minutes -->
+<section class="scr" id="s-rest" hidden>
+  <p class="tag">Coach</p><div class="zzz" id="rest-emoji">😴</div><h1 id="rest-title">Coach is resting. Ask your grown-up!</h1>
+  <div class="grown"><p class="gh">For a grown-up</p>
+    <p class="q" id="rest-why">Your child used all the coach minutes.</p>
+    <p class="fine">Free: 10 Coach minutes every day.</p>
+    <div id="upgrades" hidden><button class="hear" id="upgrade">Founding Family: $20 a month</button>
+    <p class="fine"><b>Everything in Free, unlimited, plus 60 minutes of live conversation.</b> And a Pitch Night spot. Fair use: up to 60 minutes a day.</p>
+    <button class="hear" id="upgrade-pro">Pro: $100 a month</button>
+    <p class="fine"><b>Everything in Founding Family, plus 300 live minutes a month</b> and 4 in-person group classes a month at GPS Kids HQ.</p>
+    <button class="hear" id="upgrade-all">All Access: $200 a month</button>
+    <p class="fine"><b>Everything in Pro</b>, plus about 8 in-person classes a month at HQ.</p>
+    <p class="fine" id="upgrade-note" hidden></p></div></div>
+  <button class="big" id="rest-back">OK</button>
+</section>
+
+<!-- Safety stop -->
+<section class="scr" id="s-safe" hidden>
+  <p class="tag">Let's pause</p><h1>Let's get a parent or trusted adult to join you.</h1>
+  <p class="q">You are not in trouble. Please go get a grown-up you trust right now.</p>
+  <div class="grown"><p class="gh">Need help now?</p>
+    <p class="q"><b>Call or text 988</b><br>Suicide and Crisis Lifeline. Free, any time, day or night.</p>
+    <p class="fine">In danger right now? Call 911. Outside the US, call your local emergency number.</p></div>
+  <a class="big" id="call988" href="tel:988" style="display:flex;align-items:center;justify-content:center;text-decoration:none">Call 988</a>
+</section>
+
+<!-- Live (Phase 2) -->
+<section class="scr" id="s-live" hidden>
+  <p class="tag">Coach <span>Live</span></p><h1 id="live-title">Connecting...</h1>
+  <p class="q" id="live-text"></p>
+  <button class="big" id="live-stop">Stop</button>
+</section>
+</main>
+<script src="/voice-coach.js?v=1" type="module"></script>
+</body></html>

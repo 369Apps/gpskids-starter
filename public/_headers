@@ -1,0 +1,66 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: microphone=(self), camera=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+  Cache-Control: public, max-age=0, must-revalidate
+
+/fonts/*
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.css
+  ! Cache-Control
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.png
+  ! Cache-Control
+  Cache-Control: public, max-age=86400
+
+/pitch-admin*
+  ! Cache-Control
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/stats*
+  ! Cache-Control
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/coach-notes*
+  ! Cache-Control
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+
+/family-notes*
+  ! Cache-Control
+  Cache-Control: no-store
+  X-Robots-Tag: noindex, nofollow
+  Referrer-Policy: no-referrer
+
+/voice-coach*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+  X-Robots-Tag: noindex
+
+/voice-coach-admin*
+  X-Robots-Tag: noindex
+
+/try*
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+  Permissions-Policy: microphone=(self), camera=(), geolocation=()
+  Cache-Control: no-store
+
+/
+  ! Content-Security-Policy
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self' blob:; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+  Cache-Control: no-store
+
+/free-coach-leads*
+  X-Robots-Tag: noindex

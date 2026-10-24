@@ -1,0 +1,19 @@
+name: Feature idea
+description: Suggest something the speaking coach should do
+title: "Feature: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What should the app do?
+      description: No child names, emails, photos, or screenshots of a real family.
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who is it for?
+      description: A child, a parent, a teacher, or someone running their own copy.
+    validations:
+      required: true

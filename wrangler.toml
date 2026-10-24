@@ -1,0 +1,93 @@
+# GPS Kids Speak. Replace every database_id and bucket_name before you deploy.
+# Create them with: npx wrangler d1 create gpskids-ratelimit  (and the others listed below)
+# Then paste the id Wrangler prints. Do not commit real account ids from another project.
+name = "gpskids-speak"
+pages_build_output_dir = "./public"
+compatibility_date = "2025-09-01"
+
+[vars]
+VOICE = "1"
+# selfhost: this fork records anonymous events on its own host. See functions/api/ev.js.
+EV_ENV = "selfhost"
+OPEN_DEPLOY = "1"
+
+[observability]
+enabled = true
+
+[observability.traces]
+enabled = true
+
+[ai]
+binding = "AI"
+
+# Counters only. No kid content.
+[[d1_databases]]
+binding = "RL"
+database_name = "gpskids-ratelimit"
+database_id = "00000000-0000-4000-8000-000000000001"
+
+# Pitch tips are not stored. The binding remains so a fork can turn storage on later in its own database.
+[[d1_databases]]
+binding = "PITCH"
+database_name = "gpskids-pitch"
+database_id = "00000000-0000-4000-8000-000000000002"
+migrations_dir = "migrations-pitch"
+
+[[r2_buckets]]
+binding = "PITCH_AUDIO"
+bucket_name = "gpskids-pitch-audio"
+
+# Anonymous usage events. No names, emails, ages, words, or audio.
+[[d1_databases]]
+binding = "EV"
+database_name = "gpskids-events"
+database_id = "00000000-0000-4000-8000-000000000003"
+migrations_dir = "migrations-events"
+
+# Voice-coach usage counters and parent leads (parent first name + email + age band only).
+[[d1_databases]]
+binding = "VCU"
+database_name = "gpskids-usage"
+database_id = "00000000-0000-4000-8000-000000000004"
+migrations_dir = "migrations-vcusage"
+
+[env.preview.vars]
+VOICE = "1"
+EV_ENV = "selfhost"
+OPEN_DEPLOY = "1"
+
+[env.preview.observability]
+enabled = true
+
+[env.preview.observability.traces]
+enabled = true
+
+[env.preview.ai]
+binding = "AI"
+
+[[env.preview.d1_databases]]
+binding = "RL"
+database_name = "gpskids-ratelimit"
+database_id = "00000000-0000-4000-8000-000000000001"
+
+[[env.preview.d1_databases]]
+binding = "PITCH"
+database_name = "gpskids-pitch"
+database_id = "00000000-0000-4000-8000-000000000002"
+migrations_dir = "migrations-pitch"
+
+[[env.preview.r2_buckets]]
+binding = "PITCH_AUDIO"
+bucket_name = "gpskids-pitch-audio"
+
+[[env.preview.d1_databases]]
+binding = "EV"
+database_name = "gpskids-events"
+database_id = "00000000-0000-4000-8000-000000000003"
+migrations_dir = "migrations-events"
+
+[[env.preview.d1_databases]]
+binding = "VCU"
+database_name = "gpskids-usage"
+database_id = "00000000-0000-4000-8000-000000000004"
+migrations_dir = "migrations-vcusage"

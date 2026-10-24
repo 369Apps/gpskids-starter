@@ -1,0 +1,81 @@
+@font-face{font-family:"DM Sans";font-weight:400 800;font-display:swap;src:url(/fonts/dmsans.woff2) format("woff2")}
+:root{--paper:#fbf8ef;--ink:#14213d;--muted:#4c5873;--blue:#1458d4;--soft:#fff4d1;--red:#c23a2f;--line:#dbe3ee}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.45 "DM Sans",system-ui,sans-serif}
+.pv{margin:0;background:var(--soft);text-align:center;font-size:13px;padding:6px}
+main{max-width:560px;margin:0 auto;padding:0 20px 40px}
+.hero{padding:28px 0 18px;display:flex;flex-direction:column;gap:12px}
+.brand{margin:0;font-weight:800;color:var(--blue);letter-spacing:.04em;text-transform:uppercase;font-size:14px}
+h1{margin:0;font-size:34px;line-height:1.1}h2{font-size:22px;margin:26px 0 10px}h3{margin:0 0 4px;font-size:18px;display:flex;justify-content:space-between}
+.sub{margin:0;color:var(--muted);font-size:19px}
+.big{width:100%;min-height:64px;border:0;border-radius:18px;background:var(--blue);color:#fff;font:800 22px "DM Sans",system-ui;box-shadow:0 5px 0 #0c3a8f;cursor:pointer}
+.big:disabled{opacity:.45}.big.sm{min-height:54px;font-size:19px}
+.link{background:none;border:0;color:var(--blue);font:700 17px "DM Sans",system-ui;text-align:center;cursor:pointer;padding:6px}
+.paused{margin:0;color:var(--muted);text-align:center}
+.trust{padding:14px 14px 14px 34px;background:#fff;border:2px solid var(--line);border-radius:16px;margin:8px 0}
+.trust li{margin:4px 0}.how li{margin:4px 0}
+.plan{background:#fff;border:2px solid var(--line);border-radius:16px;padding:14px;margin:10px 0;transition:.3s}
+.plan p{margin:0;color:var(--muted)}.plan.hi{border-color:var(--blue)}.plan.flash{box-shadow:0 0 0 4px #f3bd35}
+.badge{display:inline-block;background:var(--blue);color:#fff!important;border-radius:99px;padding:1px 10px;font-size:12px;font-weight:800;margin-bottom:6px!important}
+.call{margin-top:6px!important;color:var(--blue)!important;font-weight:700}
+.fine{font-size:14px;color:var(--muted);margin:6px 0}.bad{color:var(--red)}
+form{display:flex;flex-direction:column;gap:10px}label{display:flex;flex-direction:column;font-weight:700;font-size:15px;gap:4px}
+input,select{font:17px "DM Sans",system-ui;padding:12px;border:2px solid var(--line);border-radius:12px;background:#fff}
+.ck{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;font-size:16px}.ck input{width:24px;height:24px;flex:none;margin-top:2px}
+.faq dt{font-weight:800;margin-top:10px}.faq dd{margin:2px 0 0;color:var(--muted)}
+footer{margin-top:30px;font-size:14px;color:var(--muted)}footer p{margin:4px 0}footer a{color:var(--blue)}
+.modal{position:fixed;inset:0;background:rgba(20,33,61,.55);display:flex;align-items:flex-end;justify-content:center;z-index:9}
+.card{background:#fff;width:100%;max-width:560px;border-radius:22px 22px 0 0;padding:22px 20px calc(22px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:12px;max-height:100svh;overflow:auto}
+.card h2{margin:0}.ts{min-height:65px}
+.live{align-items:center;text-align:center;min-height:70svh}
+.timer{font-size:44px;font-weight:800;margin:0}.state{font-size:20px;margin:0;font-weight:700}
+.orb{width:140px;height:140px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#6fa0ff,var(--blue));margin:12px auto;transition:transform .15s}
+.orb.talk{animation:p 1s infinite}@keyframes p{50%{transform:scale(1.08)}}
+.stop{background:var(--red);box-shadow:0 5px 0 #7d241d;margin-top:auto}
+
+button.plan{display:block;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}.plan.sel{border-color:var(--blue);box-shadow:0 0 0 3px var(--blue) inset}.badge.alt{opacity:.85}
+.plan .pp{display:block;margin:0;color:var(--muted)}.plan .h3{display:flex;justify-content:space-between;font-weight:800;font-size:18px;margin:0 0 4px;color:var(--ink,#14213d)}.plan .badge{display:inline-block}
+.plan .pp.badge{display:inline-block;margin-bottom:6px}
+.tabs{display:flex;gap:6px;margin:4px 0 10px}.tab{flex:1;padding:10px;border-radius:12px;border:2px solid var(--line);background:#fff;font:inherit;font-weight:800;color:inherit}.tab.on{border-color:var(--blue);background:var(--blue);color:#fff}
+.cmp{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:14px;background:#fff;border-radius:14px;overflow:hidden;border:2px solid var(--line)}
+.cmp th,.cmp td{padding:8px 6px;text-align:center;border-bottom:1px solid var(--line);word-wrap:break-word;vertical-align:middle}.cmp tbody th{text-align:left;font-weight:600;color:var(--muted);width:34%}
+.cmp thead th{font-size:15px;line-height:1.2}.cmp thead th b{display:block;font-size:16px;margin-top:2px}.cmp thead th:first-child{width:34%}
+.cmp .plan.sel{background:#e8f0ff;box-shadow:inset 0 3px 0 var(--blue)}.cmp .ok{color:#1a8f3c;font-weight:800;font-size:17px}.cmp .no{color:var(--muted)}
+.pick{width:100%;padding:10px 4px;border-radius:10px;border:2px solid var(--blue);background:#fff;color:var(--blue);font:inherit;font-weight:800;font-size:14px}.pick.pri{background:var(--blue);color:#fff}
+.picked{margin:0 0 10px;padding:12px 14px;border-radius:12px;background:#e8f0ff;border:2px solid var(--blue);font-size:17px}
+#signup.pulse .picked{animation:gkpulse 1.2s ease 2}@keyframes gkpulse{0%,100%{box-shadow:0 0 0 0 rgba(26,92,230,0)}50%{box-shadow:0 0 0 8px rgba(26,92,230,.35)}}
+.mb{display:block;font-size:11px;color:var(--muted);margin-top:4px;line-height:1.2}.pick.pay{background:var(--blue);color:#fff}.days{display:grid;grid-template-columns:1fr 1fr;gap:8px}#l-call{display:block;margin:6px auto 0;background:none;border:0;color:var(--blue);font:inherit;text-decoration:underline;padding:8px}
+
+/* back from Stripe: only the welcome card, at the top (no scroll-position guessing) */
+body.paid-mode main > *:not(#paid){display:none!important}
+body.paid-mode #paid{margin-top:12px}
+.linkish{background:none;border:0;padding:0;color:inherit;text-decoration:underline;font:inherit;cursor:pointer}
+
+/* mobile pass (Oct 21 2026): 44px+ tap targets, 15px+ table text, sticky one-button bar */
+.hero .link{display:flex;align-items:center;justify-content:center;min-height:44px;margin:4px auto 0}
+.cmp{font-size:15px}.cmp th,.cmp td{padding:10px 6px}.pick{font-size:15px;min-height:48px}.mb{font-size:15px;line-height:1.25}#plans .fine{font-size:15px}
+.tab{min-height:48px}#l-call{min-height:48px}.ck{min-height:44px;padding:4px 0}.ck input{width:28px;height:28px}
+input[type=email],input[type=tel],input[type=text]{min-height:48px;font-size:17px}
+#stick{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(250,247,240,.97);box-shadow:0 -4px 16px rgba(0,0,0,.08)}
+#stick .big{max-width:560px;margin:0 auto;display:block}body.stick-on{padding-bottom:84px}
+.cmp tr:last-child td{vertical-align:top}
+
+/* one-field form (Oct 21 2026): 16px+ text so iOS never zooms, Turnstile space reserved so nothing jumps */
+#signup label{font-size:16px}#signup .fine{font-size:16px}#signup input[type=email],#signup input[type=tel]{font-size:17px;min-height:52px}
+#l-ts{min-height:70px}.link.sm{font-size:16px;min-height:44px;align-self:flex-start;padding:0}
+#l-send{scroll-margin-bottom:16px}
+#signup input:not([type=checkbox]),#signup select{font-size:17px;min-height:52px}
+
+/* embed (home page overlay) */
+body.embed main{display:none}body.embed .pv{display:none}body.embed #stick{display:none!important}
+body.embed.embed-choice main{display:block}body.embed.embed-choice main > *:not(#plans):not(#signup){display:none!important}
+body.embed.embed-choice .tabs{display:none}
+
+#pd-more{min-height:44px;display:inline-flex;align-items:center}
+
+#v-timer{display:none!important}
+/* after a kid-only talk: a big "Grown-up, tap here" card (kids are never asked for contact info) */
+.kid-card { position: fixed; inset: 0; z-index: 60; background: #fff8e6; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; text-align: center; gap: 12px; }
+.kid-card .kc-big { font-size: 2rem; font-weight: 800; margin: 0; }
+.kid-card .kc-sub { font-size: 1.2rem; margin: 0 0 8px; }
+.kid-card .big { min-height: 64px; font-size: 1.3rem; width: 100%; max-width: 360px; }
