@@ -1,6 +1,5 @@
 -- Kids Pitch Night entries (PREVIEW database gpskids-pitchnight-preview; production gets its own database at go-live).
--- The ONLY table in GPS Kids Speak with personal info: parent name/email/phone, kid first name + age, the transcript and
--- the scores of the submitted pitch. The audio itself is in R2 (audio_key). One row per parent email + kid first name
+-- Optional table. The public app does not store pitches. If a fork turns storage on, do not save a child's name, photo, or recording.
 -- (ekey); resubmitting replaces the row (subs counts submissions, capped). test = 1 marks automated test entries.
 CREATE TABLE IF NOT EXISTS entries (
   id TEXT PRIMARY KEY,

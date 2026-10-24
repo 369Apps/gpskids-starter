@@ -1,5 +1,4 @@
--- Weekly $100 giveaway (PREVIEW). Only filled after a grown-up passes the check and ticks the consent box.
--- Personal data kept: parent email, kid first name, kid age. Nothing else (no last name, photo, address, phone, school).
+-- Unused by the public app. The public board is off and does not store a child's name.
 CREATE TABLE IF NOT EXISTS prize_entries (
   id TEXT PRIMARY KEY,
   ekey TEXT NOT NULL UNIQUE,          -- parent email + kid first name (lowercase)

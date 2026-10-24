@@ -1,6 +1,4 @@
--- Coach notes after class (Oct 20 2026, PREVIEW first). Additive only: one new table.
--- A coach writes one short note per kid after a Tue or Thu class. Rows belong to ONE partner (from the coach key);
--- a key only ever reads and writes its own partner's rows. Kept: class date, kid first name, the note. No contact details.
+-- Optional notes table. The public app keeps coach notes on the phone, not in this database, and does not store a child's name.
 CREATE TABLE IF NOT EXISTS coach_notes (
   id TEXT PRIMARY KEY,
   partner TEXT NOT NULL,

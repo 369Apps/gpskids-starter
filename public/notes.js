@@ -1,7 +1,7 @@
 // GPS Kids Speak: coach notes per kid (ONE-STOP-PLAN step 1). Pure functions only: no storage, no network, no UI.
 // DEVICE-ONLY, like the rest of class mode: a note is saved on the kid's player on the class phone. It reaches the parent
 // two ways, both from the coach's own phone: inside the parent text (WhatsApp / Text) and inside the "Take me home" link.
-// Nothing is sent to our server. A note is short, plain words: no digits runs, no emails, no links (COPPA: first name only).
+// Nothing is sent to our server. A note is short, plain words: no digits runs, no emails, no links, and no child name.
 export const MAX_NOTES = 5, MAX_LEN = 60;
 // The quick notes a first-day coach can tap. Plain actions a kid understands.
 export const QUICK = ["Great eye contact", "Speak louder", "Strong start", "Strong end", "Slow down", "Great energy",

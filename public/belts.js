@@ -42,7 +42,7 @@ export function check(seen, days, xpAll) {
   if (!Number.isInteger(seen) || seen < 0 || seen >= BELTS.length) return { i, up: false, store: true };
   return { i, up: i > seen, store: i !== seen && i > seen };
 }
-// Share text: first name only (trimmed, letters only, max 16), no link, nothing personal.
+// Share text never includes a name, a link, or anything personal.
 export function safeName(n) { const s = String(n || "").normalize("NFC").replace(/[^\p{L}\p{M}' -]/gu, "").trim().split(/\s+/)[0] || ""; return s.slice(0, 16); }
 export function shareText(_name, i) {
   const B = BELTS[Math.max(0, Math.min(BELTS.length - 1, i | 0))];

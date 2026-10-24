@@ -29,11 +29,11 @@ function walk(dir, out = []) {
     if (name === "node_modules" || name === ".git") continue;
     const p = join(dir, name);
     if (statSync(p).isDirectory()) walk(p, out);
-    else if (/\.(js|html|mjs|css)$/.test(name)) out.push(p);
+    else if (/\.(js|html|mjs|css|txt|xml|md)$/.test(name)) out.push(p);
   }
   return out;
 }
-const banned = [/api\.x\.ai/i, /grok-/i, /xai-client-secret/i, /bobbyve\.com/i, /1740 Grassland/i, /COACH_CODE\s*=\s*"COACH"/];
+const banned = [/api\.x\.ai/i, /grok-/i, /xai-client-secret/i, /bobbyve\.com/i, /1740 Grassland/i, /Alpharetta/i, /COACH_CODE\s*=\s*"COACH"/];
 const hits = [];
 for (const p of walk("public")) {
   const t = readFileSync(p, "utf8");

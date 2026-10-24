@@ -1,5 +1,5 @@
 -- Book a free trial class (Oct 17 2026, PREVIEW first). Additive only: one new table, nothing else changes.
--- Filled only when a grown-up submits the trial form. Kept: parent name + phone, child first name + age, the day.
+-- Filled only when a grown-up submits the trial form. Kept: parent name, parent phone, child's age, and the day. The kid column stays empty.
 -- ghl = 'sent' once the contact is in GoHighLevel (GPS Kids HQ, tag trial-class), 'pending' when GHL isn't set up yet,
 -- 'error' when GHL refused it (the row is kept either way, so no booking is ever lost).
 CREATE TABLE IF NOT EXISTS trial_requests (

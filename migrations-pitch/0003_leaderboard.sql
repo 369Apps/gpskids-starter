@@ -1,6 +1,4 @@
--- GPS Kids Speaking Leaderboard (PREVIEW DB ONLY until Bobby approves). Replaces the 0002 weekly giveaway tables (left unused).
--- Filled only after a grown-up passes the check, says they are 18+, accepts the rules and ticks consent.
--- Personal data kept: parent email (to contact a winner's parent), kid first name, last initial, age. No kid email, phone, photo, school.
+-- Unused by the public app. The public board is off and does not store a child's name.
 CREATE TABLE IF NOT EXISTS lb_entries (
   id TEXT PRIMARY KEY,
   ekey TEXT NOT NULL UNIQUE,          -- parent email + kid first name + last initial (lowercase)

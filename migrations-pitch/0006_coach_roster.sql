@@ -1,6 +1,4 @@
--- Coach roster + parent links (Oct 20 2026, PREVIEW first). Replaces the 0005 coach_notes shape (preview had no real rows).
--- coaches: one row per coach; only the SHA-256 of the coach key is stored. kids: first name only, the coach's class day,
--- and the SHA-256 of a long random parent link token. coach_notes: one note per kid per class date.
+-- Optional roster tables. The public app does not write them and does not store a child's name.
 DROP TABLE IF EXISTS coach_notes;
 CREATE TABLE IF NOT EXISTS coaches (id TEXT PRIMARY KEY, name TEXT NOT NULL, key_hash TEXT NOT NULL UNIQUE, created INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS kids (
