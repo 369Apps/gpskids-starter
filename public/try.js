@@ -298,7 +298,7 @@ if (EMBED) { // grown-up pop-up (Oct 21): centered modal, dimmed background, foc
 { const pl = new URLSearchParams(location.search).get("plan"); if (!EMBED && PLAN_NAME[pl]) setTimeout(() => pickPlan(pl), 300); }
 
 // home: "I'm a kid, let's play" shows the existing kid age pick (app.js handles the tap on an age)
-{ const k = document.getElementById("vh-kid"), vp = document.getElementById("v-pick"); if (k && vp) k.onclick = () => { evt("kid_link_click"); vp.classList.add("kid-mode"); try { history.pushState({ kid: 1 }, "", location.pathname + location.search); } catch (x) {} window.scrollTo(0, 0); };
+{ const k = document.getElementById("vh-kid"), vp = document.getElementById("v-pick"); if (k && vp) k.onclick = () => { evt("kid_link_click"); if (window.gksQuickStart) return window.gksQuickStart(); vp.classList.add("kid-mode"); try { history.pushState({ kid: 1 }, "", location.pathname + location.search); } catch (x) {} window.scrollTo(0, 0); };
   window.addEventListener("popstate", () => { if (vp.classList.contains("kid-mode")) { vp.classList.remove("kid-mode"); window.scrollTo(0, 0); } }); }
 
 // orb-pulse: the pill under the orb starts the same talk
