@@ -262,7 +262,7 @@ const exOf = (it) => (it && it.ex) || exampleFor(it); // a club challenge brings
    Only before this player's first finished talk. Never for grown-ups, Pitch Night, the class phone, duels or a kid already on the
    leaderboard (so the leaderboard rules, class mode and Pitch Night stay exactly as they are). The prompt is a normal bank prompt
    (an easy intro), so a friend duel opens the same challenge. Test phones can turn it off with gks_test_nofirst = 1. ---------- */
-const FIRST = { goal: 20, max: 30, minStop: 3, wait: 8000, i: { sprouts: 33, explorers: 26, leaders: 26, trailblazers: 26 } };
+const FIRST = { goal: 30, max: 40, minStop: 3, wait: 8000, i: { sprouts: 33, explorers: 26, leaders: 26, trailblazers: 26 } };
 function firstKid() {
   if (!band || isAdult() || !(band in FIRST.i) || PNA || CLASS_CODE || round !== "" || days().length) return false;
   if (rawGet("gks_test_nofirst") === "1") return false; // test phones only
@@ -407,7 +407,7 @@ function paintHome() {
   if (s.today) { dr.hidden = false; dr.textContent = bt.date === today && btO ? `✅ Done today! Come back tomorrow and beat your ${btO}%.` : "✅ Done today! Come back tomorrow, or try another one."; }
   else if (s.n > 0) { dr.hidden = false; dr.classList.add("nudge"); dr.textContent = bt.date === addDays(today, -1) && btO ? `Beat yesterday's ${btO}% and keep your ${s.n}-day streak 🔥` : `Speak today to keep your ${s.n}-day streak 🔥`; }
   else dr.hidden = true;
-  $("start-btn").textContent = isAdult() ? "🎤 Start recording" : "🎤 Today's challenge";
+  $("start-btn").textContent = isAdult() ? "🎤 Start recording" : "▶ Start";
   paintVoiceBits(); checkDuels(); syncProfileBand(); pnCard(); pzCard(kid); pzStartNote(kid); paintHomeCode(); paintBelt(kid);
   $("buddy-btn").hidden = !kid;
   $("feat-card").hidden = !(kid && FT.isOn(today) && !item.featured && !item.first);
@@ -448,7 +448,17 @@ $("band-mini").addEventListener("click", paintPick); // kids: the small age-grou
 $("feat-card").addEventListener("click", () => { TR.track("feat_pick"); store("gks_feat", { date: today }); store(K.shuffle, { date: today, n: 0 }); $("more").open = false; paintHome(); window.scrollTo(0, 0); toast("Halloween challenge on! Tap Today's challenge."); });
 $("shuffle-btn").addEventListener("click", () => { TR.track("shuffle"); store("gks_feat", null); store(K.shuffle, { date: today, n: shuffleN() + 1 }); paintHome(); toast("New prompt! Same streak."); });
 // Kids: Today's challenge -> the quick 4-part plan (a tester's plan step, one tap later) -> "Start talking" -> recording with the cues pinned.
-$("start-btn").addEventListener("click", () => { if (isAdult()) return openRec("audio", true); if (isFirst()) return openRec("audio", true); wantPlan = true; openRec("audio", false); });
+// Quick start: kids go straight to talking in one tap; "Plan first" stays as the small link above.
+$("start-btn").addEventListener("click", () => { primeAudio(); quickGo = !isAdult(); openRec("audio", true); });
+/* One tap from the landing page: no age pick, no plan, no forms. Uses the saved age group, else Explorers (change it later on home). */
+function quickStart() {
+  primeAudio();
+  try { sessionStorage.removeItem("gks_pickfor"); } catch (e) {}
+  if (!band || (BANDS[band] && BANDS[band].adult)) { band = "explorers"; store(K.band, band); TR.track("band_pick", null, "quick"); }
+  history.replaceState(null, "", location.pathname); paintHome();
+  quickGo = true; openRec("audio", true);
+}
+window.gksQuickStart = quickStart;
 $("age-btn").addEventListener("click", paintPick);
 $("more").addEventListener("toggle", () => { if ($("more").open) TR.track("more_open", null, "home"); });
 /* Talk time chips 30/60/90 s + "Plan first" (optional; Start = jump in) */
@@ -505,7 +515,7 @@ function pickMime() {
   for (const m of order) { try { if (MediaRecorder.isTypeSupported(m)) return m; } catch (e) {} }
   return "";
 }
-let noRecLater = false;
+let noRecLater = false, quickGo = false;
 let round = ""; // "" normal | "twist" funny twist replay | "duel" grown-up's turn in a Family duel (PREVIEW)
 function openRec(m, autostart, push = true, r = push ? "" : round) {
   stopAll(); V.stop(); $("v-rec").classList.remove("first-met");
@@ -533,9 +543,9 @@ function openRec(m, autostart, push = true, r = push ? "" : round) {
   show("v-rec");
   noRecLater = plan && m !== "typed" && !canRecord; // no recorder here: plan first, then the friendly "type instead" message
   if (!PNA && round === "" && push) TR.track("rec_open", item.s, isFirst() ? "first" : "daily");
-  if (plan) { count("prep_used"); startPrep(); }
+  if (plan) { quickGo = false; count("prep_used"); startPrep(); }
   else if (m !== "typed" && !canRecord) micError("unsupported");
-  else if (autostart && mode === "audio" && (store("gks_mic") === "1" || isFirst())) startAudio(); // first challenge: the Start tap asks for the mic
+  else if (autostart && mode === "audio" && (store("gks_mic") === "1" || isFirst() || quickGo)) { quickGo = false; startAudio(); } // first challenge: the Start tap asks for the mic
 }
 const maxSecs = () => (PNA ? PN.MAX_SECS : MAX_SECS); // Pitch Night: 1-minute pitch, stops at 1:05
 const barMax = () => (isFirst() ? item.s : mode === "audio" ? Math.min(maxSecs(), item.s * 1.5) : item.s * 1.5);
@@ -693,10 +703,15 @@ async function startAudio() {
   startTimer(); paintRec(); meter(); captions();
   if (navigator.vibrate) navigator.vibrate(40);
 }
+let acPre = null;
+function primeAudio() { // inside the tap: iPhone only allows sound and a running AudioContext that start from a user gesture
+  try { V.unlock(); } catch (e) {}
+  try { const C = window.AudioContext || window.webkitAudioContext; if (C && !acPre) acPre = new C(); if (acPre && acPre.state === "suspended") acPre.resume().catch(() => {}); } catch (e) {}
+}
 function meter() {
   try {
     const C = window.AudioContext || window.webkitAudioContext; if (!C) return;
-    ac = new C(); if (ac.state === "suspended") ac.resume().catch(() => {});
+    ac = acPre || new C(); acPre = null; if (ac.state === "suspended") ac.resume().catch(() => {});
     const an = ac.createAnalyser(); an.fftSize = 256; ac.createMediaStreamSource(stream).connect(an);
     const buf = new Uint8Array(an.fftSize), bars = $("meter").children;
     const loop = () => {
